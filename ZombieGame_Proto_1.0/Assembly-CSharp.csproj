@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Level Assets\Level Scripts\S_Randomise_Buildings.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Sector_Randomise.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

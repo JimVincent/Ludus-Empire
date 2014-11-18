@@ -9,7 +9,8 @@ public class S_Sector_Randomise : MonoBehaviour {
 	public float offsetFromLarge, offsetFromMedium;
 
 	Vector3 objectPosition;
-	float xPos, zPos;
+	float xPos, zPos, degreesOfRotation;
+	Quaternion objectRotation;
 	int randomIndex;
 	List<Transform> largeObsInWorld = new List<Transform>();
 	List<Transform> mediumObsInWorld = new List<Transform>();
@@ -34,9 +35,12 @@ public class S_Sector_Randomise : MonoBehaviour {
 		zPos = Random.Range(transform.position.z - (transform.localScale.z/2),transform.position.z + (transform.localScale.z/2));
 		objectPosition = new Vector3(xPos,1,zPos);
 
+		//degreesOfRotation = Random.Range(0,360);
+		objectRotation.eulerAngles = new Vector3(0,degreesOfRotation,0);
+
 		randomIndex = Mathf.RoundToInt(Random.Range(0,buildings.Count));
 
-		Instantiate(buildings[randomIndex],objectPosition, Quaternion.identity);
+		Instantiate(buildings[randomIndex],objectPosition, objectRotation);
 	}
 
 	void PlaceLargeObstacles(){
