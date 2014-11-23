@@ -54,6 +54,8 @@
      <Compile Include="Assets\Scripts\GameLogic\S_DayNightCycle.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_PosTracker.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />
+     <Compile Include="Assets\Scripts\Player\S_GameCamera.cs" />
+     <Compile Include="Assets\Scripts\Player\S_PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\S_Player_Torch.cs" />
      <Compile Include="Assets\Scripts\UI\S_InventoryManager.cs" />
   </ItemGroup>
