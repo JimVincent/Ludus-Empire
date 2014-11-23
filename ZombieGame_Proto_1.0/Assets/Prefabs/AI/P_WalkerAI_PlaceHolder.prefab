@@ -32,6 +32,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 195: {fileID: 19500000}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: P_WalkerAI_PlaceHolder
   m_TagString: Untagged
@@ -58,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .723510802, y: 2.78694916, z: -5.17357874}
+  m_LocalPosition: {x: -4.23756504, y: 3.00642776, z: -19.008009}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64236a4107c8f74a8fbceb186287e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
   rotateSpeed: 1
   sightLength: 5
   sightAngle: 110
@@ -144,6 +145,22 @@ MonoBehaviour:
   burnRate: 20
   health: 100
   onFire: 0
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e780e16cb077240a0da6ee901a2899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSpeed: 30
+  scaleSize: 10
+  thickness: .100000001
+  play: 0
+  soundWave: {fileID: 100000, guid: 70041ccedacd3d946ae7e33912ed1700, type: 2}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

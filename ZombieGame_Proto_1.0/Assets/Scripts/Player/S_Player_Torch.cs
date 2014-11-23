@@ -3,7 +3,7 @@ using System.Collections;
 
 public class S_Player_Torch : MonoBehaviour 
 {
-	public float torchHeight = 50.0f;
+	public float torchHeight = 5.0f;
 	[Range(0.01f, 0.5f)]
 	public float maxTorchIntensity = 0.5f;
 	[Range(0.1f, 1.0f)]
