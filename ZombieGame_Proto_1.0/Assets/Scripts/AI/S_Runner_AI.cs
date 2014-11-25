@@ -55,4 +55,18 @@ public class S_Runner_AI : MonoBehaviour
 
 		}
 	}
+
+	void OnTriggerEnter(Collider otherObj)
+	{
+		// target player
+		if(otherObj.tag == "SoundWave")
+			targetPos = playerPos;
+	}
+
+	void OnCollisionEnter(Collision otherObj)
+	{
+		// target player
+		if(otherObj.collider.tag == "Player")
+			targetPos = playerPos;
+	}
 }

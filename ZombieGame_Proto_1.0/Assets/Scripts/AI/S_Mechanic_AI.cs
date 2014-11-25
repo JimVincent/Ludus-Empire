@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class S_Mechanic_AI : MonoBehaviour 
 {
-	public enum NPCState {start, playerIn, playerOut, end};
+	public enum NPCState {waiting, requesting, };
 
 	public float playerDetectionRange;
 	public float inRangeTalkRate;

@@ -6,9 +6,10 @@ public class S_NightWaves : MonoBehaviour {
 
 	public GameObject runnerPrefab;
 	public int quantityIncreasePerDay = 3;
-	public int wavesPerNight = 4;
 	public float latestSpawnWave = 10.0f;
 	public float spawnRate = 10.0f;
+
+	public Transform[] spawnPos;
 	
 	private List<GameObject> zombies = new List<GameObject>();
 
@@ -36,9 +37,11 @@ public class S_NightWaves : MonoBehaviour {
 				timer += Time.deltaTime;
 				if(timer >= spawnRate)
 				{
+					int dice = Random.Range(0, spawnPos.Length + 1);
+
 					for(int i = 0; i < quantity; i++)
 					{
-						zombies.Add(((GameObject)Instantiate(runnerPrefab, Vector3.zero, Quaternion.identity)));
+						zombies.Add(((GameObject)Instantiate(runnerPrefab, spawnPos[dice].position, Quaternion.identity)));
 					}
 					timer = 0.0f;
 				}
@@ -62,5 +65,8 @@ public class S_NightWaves : MonoBehaviour {
 			zombies[i].GetComponent<S_Zombie_Health>().OnDeath();
 			zombies.Remove(zombies[i]);
 		}
+
+		// increase zombie amount for next night
+		quantity += quantityIncreasePerDay;
 	}
 }
