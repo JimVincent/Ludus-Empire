@@ -185,8 +185,11 @@ public class S_Walker_AI : MonoBehaviour
 
 	void OnDrawGizmosSelected() 
 	{
-		Gizmos.color = Color.blue;
+		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere(targetPos, 0.5f);
+
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawWireSphere(transform.position, sightLength);
 	}
 
 	// returns a random float within a higher and lower percentage of the original value
