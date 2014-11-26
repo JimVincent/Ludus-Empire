@@ -35,8 +35,14 @@ public class C_Building : MonoBehaviour
 		itemSpawnPos = new Vector3(transform.position.x, 0.0f, transform.position.z + (transform.localScale.z / 2) + itemSpawnradius);
 	}
 
+	// spawns random itme within random pos restraints
 	public void SpawnItem()
 	{
+		// pick a random pos within radius
+		Vector3 tempV = itemSpawnPos + Random.insideUnitSphere * itemSpawnradius;
+		Vector3 spawnPos = new Vector3(tempV.x, itemSpawnPos.y, tempV.z);
+
+		Instantiate(NewStock(), spawnPos, Quaternion.identity);
 
 	}
 
@@ -61,6 +67,7 @@ public class C_Building : MonoBehaviour
 		return tempGO;
 	}
 
+	// show the item spawn pos
 	void OnDrawGizmosSelected() 
 	{
 		Gizmos.color = Color.yellow;
