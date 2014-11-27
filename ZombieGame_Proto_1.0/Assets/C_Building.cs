@@ -3,17 +3,7 @@ using System.Collections;
 
 public class C_Building : MonoBehaviour 
 {
-	public enum Building
-	{
-		Hospital, 
-		Workshop, 
-		Convinience, 
-		Hardware, 
-		PetrolStation, 
-		MilitaryCheckpoint, 
-		RedneckHome, 
-		CampSite
-	};
+	public enum ItemType {item, carPart, requestItem};
 
 	[System.Serializable]
 	public class Item
@@ -23,31 +13,63 @@ public class C_Building : MonoBehaviour
 		public int chance;
 	}
 
-	public Building building;
-	public Item[] stock;
+	// user vars
+	public Item[] items;
+	public Item[] carParts;
+	public Item[] requestItems;
 	public float itemSpawnradius = 1.0f;
 
-	private Vector3 itemSpawnPos;
+	[System.NonSerialized]
+	public GameObject activeItem;
 
+	private Vector3 itemSpawnPos;
+	
 	void Start()
 	{
 		// puts spawn radius in front of building without overlap
-		itemSpawnPos = new Vector3(transform.position.x, 0.0f, transform.position.z + (transform.localScale.z / 2) + itemSpawnradius);
+		float zDistance =(transform.localScale.z / 2) + itemSpawnradius;
+		itemSpawnPos = transform.position;
+		itemSpawnPos += transform.forward * zDistance;
 	}
 
-	// spawns random itme within random pos restraints
-	public void SpawnItem()
+	// spawns the passed item within random pos restraints
+	public void SpawnItem(ItemType type)
 	{
+		// destroy any existing item
+		if(activeItem != null)
+			Destroy(activeItem);
+
+		switch(type)
+		{
+		case ItemType.item:
+			activeItem = NewStock(items);
+			break;
+
+		case ItemType.carPart:
+			activeItem = NewStock(carParts);
+			break;
+
+		case ItemType.requestItem:
+			activeItem = NewStock(requestItems);
+			break;
+
+		default:
+			Debug.Log("Something gone done broke!");
+			break;
+		}
+
 		// pick a random pos within radius
 		Vector3 tempV = itemSpawnPos + Random.insideUnitSphere * itemSpawnradius;
 		Vector3 spawnPos = new Vector3(tempV.x, itemSpawnPos.y, tempV.z);
 
-		Instantiate(NewStock(), spawnPos, Quaternion.identity);
-
+		// spawn obj sitting on ground level
+		activeItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
+		Vector3 pos = activeItem.transform.position;
+		activeItem.transform.position = new Vector3(pos.x, pos.y + activeItem.transform.localScale.y, pos.z);
 	}
 
 	// returns a GO from the given stock based on chance
-	public GameObject NewStock()
+	public GameObject NewStock(Item[] stock)
 	{
 		// Error item returned as pink cube
 		GameObject tempGO = GameObject.CreatePrimitive(PrimitiveType.Cube);

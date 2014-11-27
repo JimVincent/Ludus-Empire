@@ -3,11 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class S_Randomise_Buildings : MonoBehaviour {
+
+	static public S_Randomise_Buildings inst;
+
 	public List<GameObject> buildings = new List<GameObject>();
 	List<GameObject> buildingsLeft = new List<GameObject>();
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
+
+		inst = this;
+
 		int randomIndex;
 		Transform currentChild;
 

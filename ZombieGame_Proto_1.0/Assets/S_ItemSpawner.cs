@@ -1,63 +1,82 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class S_ItemSpawner : MonoBehaviour 
 {
-	// spawn box vars
-	public Vector2 spawnBoxPos;
-	public float spawnBoxWidth = 1.0f;
-	public float spawnBoxLength = 1.0f;
+	public int maxPartsPerDay;
 
-	[System.Serializable]
-	public class item
-	{
-		public GameObject prefab;
-		public int chance;
+	[System.NonSerialized]
+	static public GameObject activeRequest;
+	static public string activeRequestTag; 
 
-		[System.NonSerialized]
-		public int value;
-	}
-	
-	public item[] items;
+	private bool ready = true;
+	private int partCount = 0;
+	private List<C_Building> buildings;
 
-	private GameObject activeItem;
-	
 	// Use this for initialization
 	void Start () 
 	{
-		
+		// assign buildings class's
+		for(int i = 0; i < S_Randomise_Buildings.inst.buildings.Count; i++)
+		{
+			buildings.Add(S_Randomise_Buildings.inst.buildings[i].GetComponent<C_Building>());
+		}
 	}
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
-	
+		// replnish once per day
+		if(ready && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
+		{
+			ready = false;
+
+			// tell list of buildings to spawn  items
+			for(int i = 0; i < buildings.Count; i++)
+			{
+				buildings[i].SpawnItem(C_Building.ItemType.item);
+				print (buildings[i].transform.position);
+			}
+
+			// how many parts to spawn
+			partCount = Mathf.RoundToInt(Random.Range(1, maxPartsPerDay));
+
+			// spawn parts
+			for(int i = 0; i < partCount; i++)
+			{
+				// pick a random building
+				bool found = false;
+				while(!found)
+				{
+					int randomBuild = Mathf.RoundToInt(Random.Range(0, buildings.Count));
+
+					// check if it can spawn parts
+					if(buildings[randomBuild].carParts.Length > 0)
+					{
+						found = true;
+						buildings[randomBuild].SpawnItem(C_Building.ItemType.carPart);
+					}
+				}
+			}
+		}
 	}
 
-	// returns a prefab determined by chance
-	public GameObject NewItem()
+	// picks random building and allows spawn
+	public void SpawnRequest()
 	{
-		int diceSide = 0;
-
-		// default object
-		GameObject chosen = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		chosen.renderer.material.color = Color.magenta;
-
-		for(int i = 0; i < items.Length; i++)
+		// pick a random building
+		bool found = false;
+		while(!found)
 		{
-			diceSide += Mathf.FloorToInt((100 / items[i].chance));
-			items[i].value = diceSide;
+			int randomBuild = Mathf.RoundToInt(Random.Range(0, buildings.Count));
+			
+			// check if it can spawn parts
+			if(buildings[randomBuild].requestItems.Length > 0)
+			{
+				found = true;
+				buildings[randomBuild].SpawnItem(C_Building.ItemType.requestItem);
+			}
 		}
-
-		int diceRoll = Random.Range(1, diceSide + 1);
-
-		for(int i = 0; i < items.Length; i++)
-		{
-			// check if smaller than value
-			if(diceRoll < items[i].value)
-				chosen = items[i].prefab;
-		}
-
-		return chosen;
 	}
 }
