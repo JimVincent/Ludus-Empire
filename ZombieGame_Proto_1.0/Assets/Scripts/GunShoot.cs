@@ -28,6 +28,8 @@ public class GunShoot : MonoBehaviour {
 	private bool grenadeReleased = false;
 	public ParticleSystem Explode;
 	public GameObject Flametrigger;
+	private float machineFirerate = 0.5f;	
+	private float Firerate = 2f;
 
 
 	public enum GunState
@@ -151,46 +153,35 @@ public class GunShoot : MonoBehaviour {
 	void DoMachineGunState()
 	{
 		float Damage = 5;
-		float Firerate = 0.5f;
-	//	renderer.material.color = machineCol;
-//		shot.enabled = false;
 		
-		if (Input.GetMouseButtonDown(0)) 
+		if (Input.GetMouseButton(0) && machgunbullets > 0) 
 		{
-			timedown = true;
-			if (Physics.Raycast (transform.position, Vector3.forward, out hit, Mathf.Infinity))
+			machineFirerate += Time.deltaTime;
+
+			if (machineFirerate >= 0.5f)
 			{
-//				shot.enabled = true;
-//				shot.SetVertexCount(2);
-//				shot.SetPosition(0,Nozzle.transform.position);
-//				shot.SetPosition(1,hit.transform.position);
+				timedown = true;
+				if (Physics.Raycast (transform.position, Vector3.forward, out hit, Mathf.Infinity))
+				{
+
+				}
+				if (hit.transform.tag == "Enemy") 
+				{
+					hit.transform.SendMessage ("OnDamage", Damage, SendMessageOptions.DontRequireReceiver);
+					print (hit.collider.tag);
+				}
+
+				machgunbullets --;
+				machineFirerate = 0;
 
 			}
-			if (hit.transform.tag == "Enemy") 
-			{
-				hit.transform.SendMessage ("OnDamage", Damage, SendMessageOptions.DontRequireReceiver);
-			}
-				if (machgunbullets == 0)
-				{
-					machgunbullets = 70;
-					outofammo = true;
-					timedown = false;
-				}
-				else
-					outofammo = false;
-				if (timedown == true)
-				{
-					time = (time - (Firerate *Time.deltaTime));
-					if (time <= 0)
-					{
-						machgunbullets = machgunbullets -1;
-						fired = true;
-						timedown = false;
-						time = 1f;
-						fired = false;
-					}
-				}
 		}
+		if (Input.GetMouseButton (0) || machgunbullets <= 0) 
+		{
+		//play sound
+
+		}
+
 	}
 	
 	//ExplodeTarget Script
