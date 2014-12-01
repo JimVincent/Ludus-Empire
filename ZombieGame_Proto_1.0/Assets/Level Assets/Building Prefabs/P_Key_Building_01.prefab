@@ -82,7 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: []
-  carParts: []
+  carParts:
+  - prefab: {fileID: 100000, guid: dc23ecf8dd0d4f6409d992f7c6bbcec9, type: 2}
+    chance: 100
   requestItems: []
   itemSpawnradius: 6.61999989
 --- !u!1001 &100100000

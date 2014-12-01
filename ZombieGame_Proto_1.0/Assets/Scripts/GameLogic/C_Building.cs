@@ -32,6 +32,11 @@ public class C_Building : MonoBehaviour
 		itemSpawnPos += transform.forward * zDistance;
 	}
 
+	void Update()
+	{
+		print (itemSpawnPos);
+	}
+
 	// spawns the passed item within random pos restraints
 	public void SpawnItem(ItemType type)
 	{
@@ -39,6 +44,7 @@ public class C_Building : MonoBehaviour
 		if(activeItem != null)
 			Destroy(activeItem);
 
+		// set active item
 		switch(type)
 		{
 		case ItemType.item:

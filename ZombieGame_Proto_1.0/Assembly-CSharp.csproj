@@ -46,15 +46,15 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\C_Building.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Randomise_Buildings.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Sector_Randomise.cs" />
-     <Compile Include="Assets\S_ItemSpawner.cs" />
      <Compile Include="Assets\Scripts\AI\S_Mechanic_AI.cs" />
      <Compile Include="Assets\Scripts\AI\S_NightWaves.cs" />
      <Compile Include="Assets\Scripts\AI\S_Runner_AI.cs" />
      <Compile Include="Assets\Scripts\AI\S_Walker_AI.cs" />
      <Compile Include="Assets\Scripts\AI\S_Zombie_Health.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\C_Building.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\S_Building_Manager.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_DayNightCycle.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_PosTracker.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class S_Building_Manager : MonoBehaviour 
+public class S_Randomise_Buildings : MonoBehaviour 
 {
 	[System.NonSerialized]
 	static public GameObject activeRequest;

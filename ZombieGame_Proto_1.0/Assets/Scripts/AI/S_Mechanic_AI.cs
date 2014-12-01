@@ -4,11 +4,11 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class S_Mechanic_AI : MonoBehaviour 
 {
-	public enum NPCState {waiting, requesting, };
+	public enum NPCState {start, inGame, end};
 
 	public float playerDetectionRange;
 	public float inRangeTalkRate;
-	public float absentTalkRate;
+	public float absentTalkRate;		// says something when back in range
 
 	public AudioClip[] general;
 	public AudioClip[] getParts;
@@ -24,19 +24,18 @@ public class S_Mechanic_AI : MonoBehaviour
 	public AudioClip needScrewDriver;
 	public AudioClip needMagazine;
 
-	public AudioSource aSource;
+	private AudioSource aSource;
 
-	private bool madeRequest;
-	private bool inRange;
-	private bool talking;
+	private bool activeRequest;
 
 	private float inTimer = 0.0f;
 	private float outTimer = 0.0f;
-//	private NPCState state = NPCState.start;
+	private NPCState state = NPCState.start;
 	
 	// Use this for initialization
 	void Start () 
 	{
+		// set up audio source
 		aSource = GetComponent<AudioSource>();
 		aSource.playOnAwake = false;
 	}
@@ -44,73 +43,45 @@ public class S_Mechanic_AI : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-//		// update state
-//		float pDist = Vector3.Distance (transform.position, S_PosTracker.playerPos);
-//		if(pDist < playerDetectionRange)
-//		{
-//			if(state != NPCState.start || state != NPCState.end)
-//				state = NPCState.playerIn;
-//		}
-//		else
-//		{
-//			if(state != NPCState.start || state != NPCState.end)
-//				state = NPCState.playerOut;
-//		}
-//
-//		switch(state)
-//		{
-//		case NPCState.start:
-//
-//			inTimer += Time.deltaTime;
-//
-//			// wait for x seconds before intro
-//			if(inTimer > 3.0f)
-//			{
-//				talking = true;
-//				aSource.clip = openingDialogue;
-//				state = NPCState.playerIn;
-//			}
-//			break;
-//
-//		case NPCState.playerIn:
-//
-//			inTimer += Time.deltaTime;
-//
-//			if(madeRequest)
-//			{
-//
-//			}
-//			else
-//			{
-//				if(outTimer < absentTalkRate && inTimer > inRangeTalkRate)
-//				{
-//
-//				}
-//			}
-//
-//			break;
-//
-//		case NPCState.playerOut:
-//
-//			break;
-//
-//		case NPCState.end:
-//
-//			break;
-//
-//		default:
-//			Debug.Log("Something Gone Done Broke!");
-//			break;
-//		}
-//
-//		//plays loaded audio clip: reset both timers
-//		if(talking && !aSource.isPlaying)
-//		{
-//			talking = false;
-//			aSource.Play();
-//			inTimer = 0.0f;
-//			outTimer = 0.0f;
-//		}
+		float pDist = Vector3.Distance (transform.position, S_PosTracker.playerPos);
+
+		switch (state)
+		{
+		case NPCState.start:
+
+			aSource.clip = openingDialogue;
+			aSource.Play();
+			state = NPCState.inGame;
+			break;
+
+		case NPCState.inGame:
+
+			// track in and out time
+			if(pDist < playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
+			{
+				inTimer += Time.deltaTime;
+				
+				// play audio
+				if(inTimer > inRangeTalkRate)
+				{
+					if(!activeRequest)
+
+				}
+			}
+			else if(pDist > playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
+				outTimer += Time.deltaTime;
+
+			break;
+
+		case NPCState.end:
+
+			if(!aSource.isPlaying)
+			{
+				aSource.clip = closingDialogue;
+				aSource.Play();
+			}
+			break;
+		}
 	}
 
 	// show player detection range
@@ -120,19 +91,13 @@ public class S_Mechanic_AI : MonoBehaviour
 		Gizmos.DrawWireSphere(transform.position, playerDetectionRange);
 	}
 
-	// checks request and apply clip at rate
-	public void CheckRequest()
+	// plays random audio
+	public AudioClip NewAudio(AudioClip[] clip)
 	{
-		// assign matching audio
-		//switch(S_Replenishment.RequestedItem)
+		inTimer = 0.0f;
+		outTimer = 0.0f;
 
-
+		int randomClip = (int)Mathf.RoundToInt(Random.Range(0, clip.Length));
+		return clip[randomClip];
 	}
-
-	public int DiceRoll(int max)
-	{
-		return Random.Range(0, max);
-	}
-
-	
 }
