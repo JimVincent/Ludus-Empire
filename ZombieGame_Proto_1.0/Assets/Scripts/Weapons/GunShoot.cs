@@ -74,14 +74,14 @@ public class GunShoot : MonoBehaviour {
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Pistol;
-
+			Flametrigger.SetActive (false);
 		}
 
 		if(Input.GetKeyDown ("2"))
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.MachineGun;
-
+			Flametrigger.SetActive (false);
 		}
 
 		if (Input.GetKeyDown ("3")) 
@@ -94,6 +94,7 @@ public class GunShoot : MonoBehaviour {
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Grenade;
+			Flametrigger.SetActive (false);
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
@@ -217,7 +218,7 @@ public class GunShoot : MonoBehaviour {
 			}
 
 			if(hit && hit.transform.tag == "Enemy"){
-				//hit.transform.gameObject.GetComponent<S_Zombie_Health>().OnHit(grenadeDamage);
+				hit.transform.gameObject.GetComponent<S_Zombie_Health>().OnHit(grenadeDamage);
 			}
 		}
 	}
@@ -235,7 +236,7 @@ public class GunShoot : MonoBehaviour {
 			{
 				
 				shotGrenade = (GameObject)Instantiate (grenade,gameObject.transform.position+transform.forward*2, gameObject.transform.rotation);
-				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*5, ForceMode.VelocityChange);
+				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*10, ForceMode.VelocityChange);
 				grenadeReleased = true;
                 grenadenumber --;
             }
