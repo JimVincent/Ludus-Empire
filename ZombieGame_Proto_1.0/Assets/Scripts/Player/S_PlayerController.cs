@@ -64,6 +64,12 @@ public class S_PlayerController : MonoBehaviour
 		controller.Move(motion * Time.deltaTime);
 	}
 
+	void OnTriggerEnter(Collider otherObj)
+	{
+		if(otherObj.tag == "ZombieAttack")
+			print ("Hit Received");
+	}
+
 	//send message place holders
 		void OnBumpIntoEnemy(float dmg)
 		{

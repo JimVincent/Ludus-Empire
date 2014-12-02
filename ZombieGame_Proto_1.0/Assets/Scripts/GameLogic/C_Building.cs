@@ -32,11 +32,6 @@ public class C_Building : MonoBehaviour
 		itemSpawnPos += transform.forward * zDistance;
 	}
 
-	void Update()
-	{
-		print (itemSpawnPos);
-	}
-
 	// spawns the passed item within random pos restraints
 	public void SpawnItem(ItemType type)
 	{
