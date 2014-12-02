@@ -12,22 +12,15 @@ public class S_Mechanic_AI : MonoBehaviour
 
 	public AudioClip[] general;
 	public AudioClip[] getParts;
+	public AudioClip[] getRequest;
 	public AudioClip[] gettingAttacked;
 	public AudioClip[] thanks;
 
 	public AudioClip openingDialogue;
 	public AudioClip closingDialogue;
 
-	public AudioClip needCoffee;
-	public AudioClip needTobacco;
-	public AudioClip needTape;
-	public AudioClip needScrewDriver;
-	public AudioClip needMagazine;
-
 	private AudioSource aSource;
-
 	private bool activeRequest;
-
 	private float inTimer = 0.0f;
 	private float outTimer = 0.0f;
 	private NPCState state = NPCState.start;
@@ -45,13 +38,26 @@ public class S_Mechanic_AI : MonoBehaviour
 	{
 		float pDist = Vector3.Distance (transform.position, S_PosTracker.playerPos);
 
+		// handle reques state
+		CheckRequest ();
+
+		// reset timers
+		if(aSource.isPlaying)
+		{
+			inTimer = 0.0f;
+			outTimer = 0.0f;
+		}
+
 		switch (state)
 		{
 		case NPCState.start:
 
 			aSource.clip = openingDialogue;
 			aSource.Play();
-			state = NPCState.inGame;
+
+			// wait before state change
+			if(!aSource.isPlaying)
+				state = NPCState.inGame;
 			break;
 
 		case NPCState.inGame:
@@ -64,8 +70,8 @@ public class S_Mechanic_AI : MonoBehaviour
 				// play audio
 				if(inTimer > inRangeTalkRate)
 				{
-					if(!activeRequest)
-
+					LoadAudio();
+					aSource.Play();
 				}
 			}
 			else if(pDist > playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
@@ -94,10 +100,38 @@ public class S_Mechanic_AI : MonoBehaviour
 	// plays random audio
 	public AudioClip NewAudio(AudioClip[] clip)
 	{
-		inTimer = 0.0f;
-		outTimer = 0.0f;
-
 		int randomClip = (int)Mathf.RoundToInt(Random.Range(0, clip.Length));
 		return clip[randomClip];
+	}
+
+	// switches request state
+	public void CheckRequest()
+	{
+		// check static bool request 
+
+		if(activeRequest)// && static bool == false)
+		{
+			activeRequest = false;
+			aSource.clip = NewAudio(thanks);
+			aSource.Play();
+		}
+		else if(!activeRequest)// && static bool == true)
+		{
+			activeRequest = true;
+			aSource.clip = NewAudio(getRequest);
+			aSource.Play();
+		}
+	}
+
+	// decides what audio to play
+	public void LoadAudio()
+	{
+		// check state
+		if(activeRequest)
+			aSource.clip = NewAudio(getRequest);
+		//else if(S_CarManager.isGettingFixed == false)
+		//	aSource.clip = NewAudio(getParts);
+		else
+			aSource.clip = NewAudio(general);
 	}
 }

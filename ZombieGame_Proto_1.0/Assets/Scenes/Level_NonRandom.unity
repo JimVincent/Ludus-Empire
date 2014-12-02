@@ -1418,16 +1418,11 @@ MonoBehaviour:
   absentTalkRate: 0
   general: []
   getParts: []
+  getRequest: []
   gettingAttacked: []
   thanks: []
   openingDialogue: {fileID: 0}
   closingDialogue: {fileID: 0}
-  needCoffee: {fileID: 0}
-  needTobacco: {fileID: 0}
-  needTape: {fileID: 0}
-  needScrewDriver: {fileID: 0}
-  needMagazine: {fileID: 0}
-  aSource: {fileID: 0}
 --- !u!82 &484833602
 AudioSource:
   m_ObjectHideFlags: 0
