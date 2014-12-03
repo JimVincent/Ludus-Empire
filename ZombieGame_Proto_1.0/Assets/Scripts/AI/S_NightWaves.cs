@@ -17,6 +17,10 @@ public class S_NightWaves : MonoBehaviour {
 	private int quantity = 5;
 	private float timer = 0.0f;
 
+	//For Spawn Position
+	private Vector3 zombiePos;
+	private float offsetX, offsetZ;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -38,7 +42,10 @@ public class S_NightWaves : MonoBehaviour {
 				{
 					for(int i = 0; i < quantity; i++)
 					{
-						zombies.Add(((GameObject)Instantiate(runnerPrefab, Vector3.zero, Quaternion.identity)));
+						offsetX = transform.position.x + Random.Range(0,5);
+						offsetZ = transform.position.z + Random.Range(0,5);
+						zombiePos = new Vector3(offsetX, transform.position.y, offsetZ);
+						zombies.Add(((GameObject)Instantiate(runnerPrefab, zombiePos, Quaternion.identity)));
 					}
 					timer = 0.0f;
 				}
@@ -50,7 +57,7 @@ public class S_NightWaves : MonoBehaviour {
 			if(zombies != null && zombies.Count > 0)
 				ClearZombies();
 		}
-
+		
 	
 	}
 
