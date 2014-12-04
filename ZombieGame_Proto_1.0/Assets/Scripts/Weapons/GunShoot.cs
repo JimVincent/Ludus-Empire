@@ -13,22 +13,23 @@ public class GunShoot : MonoBehaviour {
 
 	private Ray ray;
 	private RaycastHit hit;
+	private S_InventoryManager inventory;
 	
 	//Pistol
 	public int pistolDamage = 25;
 	public float pistolFirerate = 1;
 
 	//Rifle
-	public int machgunbullets = 70;
+	public int machgunbullets = 0; //Max 70
 	public int machineDamage = 15;
 	private float machineFirerate = 0.5f;	
 
 	//Flamethrower
-	public float flamefuel = 5;
+	public float flamefuel = 0; //Max 5
 	public GameObject Flametrigger;
 
 	//Grenade Launcher
-	public int grenadenumber = 3;
+	public int grenadenumber = 0; //Max 4
 	public int grenadeDamage = 100;
 	public GameObject grenade;
 	public GameObject explosion;
@@ -63,6 +64,8 @@ public class GunShoot : MonoBehaviour {
 		ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width/2,Screen.height/2,0));
 
         blastTimer = 0.00f;
+
+		inventory = gameObject.transform.parent.GetComponent<S_InventoryManager>();
 		
 //		Flametrigger = gameObject.transform.GetChild (2).gameObject;
 	}
@@ -77,20 +80,20 @@ public class GunShoot : MonoBehaviour {
 			Flametrigger.SetActive (false);
 		}
 
-		if(Input.GetKeyDown ("2"))
+		if(Input.GetKeyDown ("2") && inventory.gotAssault)
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.MachineGun;
 			Flametrigger.SetActive (false);
 		}
 
-		if (Input.GetKeyDown ("3")) 
+		if (Input.GetKeyDown ("3") && inventory.gotFlame) 
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Flamethrower;
 		} 
 
-		if(Input.GetKeyDown ("4"))
+		if(Input.GetKeyDown ("4") && inventory.gotlauncher)
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Grenade;
@@ -144,6 +147,9 @@ public class GunShoot : MonoBehaviour {
 						if (hit.transform.tag == "Enemy") {
 							hit.transform.gameObject.GetComponent<S_Zombie_Health>().OnHit(pistolDamage);	
 							//hit.transform.SendMessage ("OnHit", pistolDamage, SendMessageOptions.DontRequireReceiver);
+						}
+						else if(hit.transform.tag == "TrashCan"){
+							hit.transform.gameObject.GetComponent<S_Trash_Can>().OnHit ();
 						}
 
 //						if (pistolbullets == 0) {

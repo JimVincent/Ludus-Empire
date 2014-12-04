@@ -42,9 +42,9 @@ public class S_InventoryManager : MonoBehaviour
 	private int gLauncherAmmo = 0;
 
 	// aquired weapons
-	private bool gotAssault = false;
-	private bool gotFlame = false;
-	private bool gotlauncher = false;
+	public bool gotAssault = false;
+	public bool gotFlame = false;
+	public bool gotlauncher = false;
 
 	// Use this for initialization
 	void Start () 

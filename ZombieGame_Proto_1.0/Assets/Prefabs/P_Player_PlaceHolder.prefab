@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 143: {fileID: 14300000}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: P_Player_PlaceHolder
   m_TagString: Player
@@ -65,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.06195712, y: 3.12010574, z: 15.799284}
+  m_LocalPosition: {x: -3.34298253, y: 8.45291138, z: 15.799284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -242,11 +243,11 @@ MonoBehaviour:
   curState: 0
   pistolDamage: 25
   pistolFirerate: 1
-  machgunbullets: 70
+  machgunbullets: 0
   machineDamage: 15
-  flamefuel: 5
+  flamefuel: 0
   Flametrigger: {fileID: 100002}
-  grenadenumber: 3
+  grenadenumber: 0
   grenadeDamage: 100
   grenade: {fileID: 100000, guid: ad52db41bf79b5944bbfbd39488a912a, type: 2}
   explosion: {fileID: 100000, guid: 0eda5ac9a48329a4ca83a2997f4696b8, type: 2}
@@ -267,6 +268,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flameDamage: 0
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 410d44ee0ccf16a46b9bd1cadb923b87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carBarObj: {fileID: 0}
+  healthBarObj: {fileID: 0}
+  assaultRObj: {fileID: 0}
+  flameTObj: {fileID: 0}
+  gLauncherObj: {fileID: 0}
+  handGunObj: {fileID: 0}
+  bulletObj: {fileID: 0}
+  infBulletObj: {fileID: 0}
+  flameFuelObj: {fileID: 0}
+  clip: {fileID: 0}
+  grenadeObj: {fileID: 0}
+  hospitalObj: {fileID: 0}
+  shopObj: {fileID: 0}
+  hardwareObj: {fileID: 0}
+  gasStationObj: {fileID: 0}
+  gunShopObj: {fileID: 0}
+  armyBaseObj: {fileID: 0}
+  backYardObj: {fileID: 0}
+  cofeeObj: {fileID: 0}
+  magazine: {fileID: 0}
+  tobacco: {fileID: 0}
+  tape: {fileID: 0}
+  screwDriverObj: {fileID: 0}
+  gotAssault: 0
+  gotFlame: 0
+  gotlauncher: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
