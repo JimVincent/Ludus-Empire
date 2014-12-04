@@ -14,7 +14,7 @@ public class S_NightWaves : MonoBehaviour {
 
 
 	// starting amount
-	private int quantity = 5;
+	public int quantity = 5;
 	private float timer = 0.0f;
 
 	//For Spawn Position
