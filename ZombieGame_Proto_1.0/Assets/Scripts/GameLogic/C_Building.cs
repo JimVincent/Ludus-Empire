@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class C_Building : MonoBehaviour 
 {
@@ -17,27 +18,39 @@ public class C_Building : MonoBehaviour
 	public Item[] items;
 	public Item[] carParts;
 	public Item[] requestItems;
-	public float itemSpawnradius = 1.0f;
+
+	public GameObject walkerPrefab;
+	public float walkerSpawnRadius;
+	public int easyZombCount, mediumZombCount, hardZombCount;
+	private List<GameObject> activeWalkers = new List<GameObject>();
 
 	[System.NonSerialized]
 	public GameObject activeItem;
 
-	private Vector3 itemSpawnPos;
-	
+	private GameObject itemSpawner = null;
+	private GameObject currentItem;
+	private float itemSpawnradius = 3.0f;
+
 	void Start()
 	{
 		// puts spawn radius in front of building without overlap
-		float zDistance =(transform.localScale.z / 2) + itemSpawnradius;
-		itemSpawnPos = transform.position;
-		itemSpawnPos += transform.forward * zDistance;
+		float zDist =(transform.localScale.z / 2) + itemSpawnradius;
+		Vector3 itemSpawnPos = transform.position + transform.forward * zDist;
+
+		// child an obj as spwanPos
+		itemSpawner = GameObject.CreatePrimitive (PrimitiveType.Cube);
+		itemSpawner.renderer.enabled = false;
+		itemSpawner.collider.enabled = false;
+		itemSpawner.transform.position = itemSpawnPos;
+		itemSpawner.transform.parent = transform;
 	}
 
 	// spawns the passed item within random pos restraints
 	public void SpawnItem(ItemType type)
 	{
 		// destroy any existing item
-		if(activeItem != null)
-			Destroy(activeItem);
+		if(currentItem != null)
+			Destroy(currentItem);
 
 		// set active item
 		switch(type)
@@ -60,13 +73,72 @@ public class C_Building : MonoBehaviour
 		}
 
 		// pick a random pos within radius
-		Vector3 tempV = itemSpawnPos + Random.insideUnitSphere * itemSpawnradius;
-		Vector3 spawnPos = new Vector3(tempV.x, itemSpawnPos.y, tempV.z);
+		Vector3 tempV = itemSpawner.transform.position + Random.insideUnitSphere * itemSpawnradius;
+		Vector3 spawnPos = new Vector3(tempV.x, itemSpawner.transform.position.y, tempV.z);
 
 		// spawn obj sitting on ground level
-		activeItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
+		currentItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
 		Vector3 pos = activeItem.transform.position;
 		activeItem.transform.position = new Vector3(pos.x, pos.y + activeItem.transform.localScale.y, pos.z);
+	}
+
+	// halves the left over zombies
+	public void HalveZombies()
+	{
+		// check for active zombies : leave 1
+		if(activeWalkers.Count > 1)
+		{
+			// even count
+			if(activeWalkers.Count % 2 == 0)
+			{
+				// remove half
+				for(int i = 0; i < activeWalkers.Count / 2; i++)
+				{
+					Destroy(activeWalkers[i]);
+					activeWalkers.RemoveAt(i);
+				}
+			}
+			else // odd count
+			{
+				// remove half and round to nearest int
+				for(int i = 0; i < Mathf.RoundToInt(activeWalkers.Count / 2); i++)
+				{
+					Destroy(activeWalkers[i]);
+					activeWalkers.RemoveAt(i);
+				}
+			}
+		}
+	}
+
+	public void SpawnZombies()
+	{
+		// remove any active zombies
+		if(activeWalkers.Count > 0)
+		{
+			// destroy all
+			for(int i = 0; i < activeWalkers.Count; i++)
+			{
+				Destroy(activeWalkers[i]);
+				activeWalkers.RemoveAt(i);
+			}
+		}
+
+		// spawn Zombies dependent on part value
+		int zombieCount;
+		if(activeItem.tag == "HardPart")
+			zombieCount = hardZombCount;
+		else if(activeItem.tag == "MediumPart")
+			zombieCount = mediumZombCount;
+		else
+			zombieCount = easyZombCount;
+
+		for(int i = 0; i < zombieCount; i++)
+		{
+			Vector3 tempVect = transform.position + Random.insideUnitSphere * walkerSpawnRadius;
+			Vector3 tempPos = new Vector3(tempVect.x, transform.position.y, tempVect.z);
+			GameObject tempObj = (GameObject)Instantiate(walkerPrefab, tempPos, Quaternion.identity);
+			activeWalkers.Add(tempObj);
+		}
 	}
 
 	// returns a GO from the given stock based on chance
@@ -88,12 +160,5 @@ public class C_Building : MonoBehaviour
 		}
 
 		return tempGO;
-	}
-
-	// show the item spawn pos
-	void OnDrawGizmosSelected() 
-	{
-		Gizmos.color = Color.yellow;
-		Gizmos.DrawWireSphere(itemSpawnPos, itemSpawnradius);
 	}
 }

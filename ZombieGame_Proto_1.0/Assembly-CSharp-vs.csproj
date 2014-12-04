@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Level Assets\Level Scripts\S_Randomise_Buildings.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Sector_Randomise.cs" />
+     <Compile Include="Assets\S_Building_Manage.cs" />
      <Compile Include="Assets\Scripts\AI\S_Mechanic_AI.cs" />
      <Compile Include="Assets\Scripts\AI\S_NightWaves.cs" />
      <Compile Include="Assets\Scripts\AI\S_Runner_AI.cs" />
