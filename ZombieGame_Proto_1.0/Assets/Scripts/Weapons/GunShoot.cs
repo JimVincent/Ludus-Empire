@@ -14,6 +14,7 @@ public class GunShoot : MonoBehaviour {
 	private Ray ray;
 	private RaycastHit hit;
 	private S_InventoryManager inventory;
+	private float machineTimer;
 	
 	//Pistol
 	public int pistolDamage = 25;
@@ -22,7 +23,7 @@ public class GunShoot : MonoBehaviour {
 	//Rifle
 	public int machgunbullets = 0; //Max 70
 	public int machineDamage = 15;
-	private float machineFirerate = 0.5f;	
+	public float machineFirerate = 0.5f;
 
 	//Flamethrower
 	public float flamefuel = 0; //Max 5
@@ -178,9 +179,9 @@ public class GunShoot : MonoBehaviour {
 	{		
 		if (Input.GetMouseButton(0) && machgunbullets > 0) 
 		{
-			machineFirerate += Time.deltaTime;
+			machineTimer += Time.deltaTime;
 
-			if (machineFirerate >= 0.5f)
+			if (machineTimer >= machineFirerate)
 			{
 //				timedown = true;
 				if (Physics.Raycast (transform.position, this.transform.forward, out hit, Mathf.Infinity))
@@ -194,7 +195,7 @@ public class GunShoot : MonoBehaviour {
 				}
 
 				machgunbullets --;
-				machineFirerate = 0;
+				machineTimer = 0;
 			}
 		}
 		if (Input.GetMouseButton (0) && machgunbullets <= 0) 
