@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\S_Building_Manage.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\zombie\Animation_S.js">
     <Files>
-      <File FileName="Assets\S_Building_Manage.cs" Line="57" Column="49" />
-      <File FileName="Assets\Scripts\GameLogic\C_Building.cs" Line="122" Column="27" />
+      <File FileName="Assets\zombie\Animation_S.js" Line="1" Column="1" />
+      <File FileName="Assets\S_Building_Manage.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameLogic\C_Building.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\GameLogic\S_DayNightCycle.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
