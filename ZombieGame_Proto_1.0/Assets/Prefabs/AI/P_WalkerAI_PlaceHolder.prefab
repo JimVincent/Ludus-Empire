@@ -414,7 +414,7 @@ MonoBehaviour:
   rotateSpeed: 1
   sightLength: 5
   sightAngle: 110
-  moveRadius: 5
+  moveRadius: 10
   attackRange: 1
   attackRate: 2
   attackArm: {fileID: 6500000}

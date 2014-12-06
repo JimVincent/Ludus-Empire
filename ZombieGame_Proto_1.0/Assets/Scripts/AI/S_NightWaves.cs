@@ -17,6 +17,7 @@ public class S_NightWaves : MonoBehaviour {
 	// starting amount
 	private int quantity = 5;
 	private float timer = 0.0f;
+	private bool callOnce;
 
 	// Use this for initialization
 	void Start () 
@@ -31,13 +32,15 @@ public class S_NightWaves : MonoBehaviour {
 
 		if(S_DayNightCycle.dayState == S_DayNightCycle.DayState.night)
 		{
+			callOnce = true;
+
 			if(S_DayNightCycle.tUntilNewDay > latestSpawnWave)
 			{
 				// spawn at rate of x
 				timer += Time.deltaTime;
 				if(timer >= spawnRate)
 				{
-					int dice = Random.Range(0, spawnPos.Length + 1);
+					int dice = Random.Range(0, spawnPos.Length);
 
 					for(int i = 0; i < quantity; i++)
 					{
@@ -50,7 +53,7 @@ public class S_NightWaves : MonoBehaviour {
 		else
 		{
 			// clear any active runners
-			if(zombies != null && zombies.Count > 0)
+			if(zombies != null && zombies.Count > 0 && !callOnce)
 				ClearZombies();
 		}
 
@@ -68,5 +71,6 @@ public class S_NightWaves : MonoBehaviour {
 
 		// increase zombie amount for next night
 		quantity += quantityIncreasePerDay;
+		callOnce = true;
 	}
 }

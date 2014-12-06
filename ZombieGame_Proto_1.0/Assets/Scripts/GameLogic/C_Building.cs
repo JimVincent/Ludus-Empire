@@ -27,23 +27,10 @@ public class C_Building : MonoBehaviour
 	[System.NonSerialized]
 	public GameObject activeItem;
 
-	private GameObject itemSpawner = null;
+	public GameObject itemSpawner;
 	private GameObject currentItem;
 	private float itemSpawnradius = 3.0f;
 
-	void Start()
-	{
-		// puts spawn radius in front of building without overlap
-		float zDist =(transform.localScale.z / 2) + itemSpawnradius;
-		Vector3 itemSpawnPos = transform.position + transform.forward * zDist;
-
-		// child an obj as spwanPos
-		itemSpawner = GameObject.CreatePrimitive (PrimitiveType.Cube);
-		itemSpawner.renderer.enabled = false;
-		itemSpawner.collider.enabled = false;
-		itemSpawner.transform.position = itemSpawnPos;
-		itemSpawner.transform.parent = transform;
-	}
 
 	// spawns the passed item within random pos restraints
 	public void SpawnItem(ItemType type)
@@ -79,7 +66,6 @@ public class C_Building : MonoBehaviour
 		// spawn obj sitting on ground level
 		currentItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
 		Vector3 pos = currentItem.transform.position;
-		currentItem.transform.position = new Vector3(pos.x, pos.y + activeItem.transform.localScale.y, pos.z);
 	}
 
 	// halves the left over zombies
@@ -134,7 +120,7 @@ public class C_Building : MonoBehaviour
 
 		for(int i = 0; i < zombieCount; i++)
 		{
-			Vector3 tempVect = transform.position + Random.insideUnitSphere * walkerSpawnRadius;
+			Vector3 tempVect = itemSpawner.transform.position + Random.insideUnitSphere * walkerSpawnRadius;
 			Vector3 tempPos = new Vector3(tempVect.x, transform.position.y, tempVect.z);
 			GameObject tempObj = (GameObject)Instantiate(walkerPrefab, tempPos, Quaternion.identity);
 			activeWalkers.Add(tempObj);
