@@ -13,7 +13,6 @@ public class S_DayNightCycle : MonoBehaviour
 	// public cycle vars
 	public float minutesInDay = 3.20f;		// *note* 2.2 minutes = 2 mins and 20 seconds
 	public float minutesInNight = 2.40f;
-	public float lightIntensity = 0.5f;
 
 	private float currentSpeed;
 	private GameObject sun;
@@ -25,14 +24,6 @@ public class S_DayNightCycle : MonoBehaviour
 		currentSpeed = 180 / MinutesToSeconds(minutesInDay);
 		transform.eulerAngles = new Vector3 (0.0f, transform.eulerAngles.y, transform.eulerAngles.z);
 		tUntilNewDay = MinutesToSeconds(minutesInDay) + MinutesToSeconds(minutesInNight);
-
-		// set up sun
-		sun = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		sun.renderer.enabled = false;
-		sun.collider.enabled = false;
-		sun.AddComponent<Light>();
-		sun.light.type = LightType.Directional;
-		sun.light.intensity = lightIntensity;
 	}
 
 	// Update is called once per frame
@@ -60,18 +51,6 @@ public class S_DayNightCycle : MonoBehaviour
 			dayState = DayState.day;
 			currentSpeed = 180 / MinutesToSeconds(minutesInDay);
 		}
-
-		///////////////////HACK TO CHANGE DAY / NIGHT//////////
-		///////////////////////////////////////////////////////
-		if(Input.GetKeyDown(KeyCode.P))		///////////////////	
-		{									///////////////////
-			if(dayState == DayState.day)	///////////////////	
-				dayState = DayState.night;	///////////////////
-			else 							///////////////////
-				dayState = DayState.day;	///////////////////
-		}									///////////////////
-		///////////////////////////////////////////////////////
-		///////////////////////////////////////////////////////
 	}
 
 	// converts minutes to seconds

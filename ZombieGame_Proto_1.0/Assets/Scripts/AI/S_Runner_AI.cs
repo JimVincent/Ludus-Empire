@@ -7,6 +7,8 @@ public class S_Runner_AI : MonoBehaviour
 	// movement
 	public float moveSpeed = 2.0f;
 	public float attackRange = 1.0f;
+	public float attackRate = 2.0f;
+	public Collider attackArm;
 
 	// targets
 	private Vector3 targetPos;
@@ -16,6 +18,8 @@ public class S_Runner_AI : MonoBehaviour
 	private S_Zombie_Health sHealth;
 	private int coin;
 
+	// timers
+	private float attackTimer = 0.0f;
 
 	// Use this for initialization
 	void Start () 
@@ -25,6 +29,9 @@ public class S_Runner_AI : MonoBehaviour
 		navAgent = GetComponent<NavMeshAgent>();
 		navAgent.speed = moveSpeed;
 		sHealth = GetComponent<S_Zombie_Health>();
+
+		attackArm.enabled = false;
+		attackArm.isTrigger = true;
 
 		// random target 50/50
 		coin = Random.Range(1, 3);
@@ -51,8 +58,29 @@ public class S_Runner_AI : MonoBehaviour
 		// closer enough to attack
 		if(Vector3.Distance(transform.position, targetPos) <= attackRange)
 		{
-			////////// run attack code here////////////////////////////////////////////////////
-
+			attackTimer += Time.deltaTime;
+			if(attackTimer > attackRate)
+			{
+				print ("Hitting");
+				attackTimer = 0.0f;
+				attackArm.enabled = true;
+			}
+			else
+				attackArm.enabled = false;
 		}
+	}
+
+	void OnTriggerEnter(Collider otherObj)
+	{
+		// target player
+		if(otherObj.tag == "SoundWave")
+			targetPos = playerPos;
+	}
+
+	void OnCollisionEnter(Collision otherObj)
+	{
+		// target player
+		if(otherObj.collider.tag == "Player")
+			targetPos = playerPos;
 	}
 }

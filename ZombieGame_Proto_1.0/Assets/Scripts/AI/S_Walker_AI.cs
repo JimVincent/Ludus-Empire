@@ -15,7 +15,10 @@ public class S_Walker_AI : MonoBehaviour
 	public float sightAngle = 110.0f;
 	[Range(1, 10)]
 	public float moveRadius = 5.0f;
+
 	public float attackRange = 1.0f;
+	public float attackRate = 2.0f;
+	public Collider attackArm;
 
 	// wait time
 	public float idleTime = 15.0f;
@@ -29,6 +32,7 @@ public class S_Walker_AI : MonoBehaviour
 	private float lookTimer = 0.0f;
 	private float searchTimer = 0.0f;
 	private float groanTimer = 0.0f;
+	private float attackTimer = 0.0f;
 
 	// targetPos is ranged off startPos
 	private Vector3 startPos;
@@ -36,17 +40,23 @@ public class S_Walker_AI : MonoBehaviour
 
 	private S_SoundWave soundWave;
 
+
 	// Use this for initialization
 	void Start () 
 	{
 		walkerState = State.idle;
 		startPos = transform.position;
 		targetPos = NewPosition();
+
 		navAgent = GetComponent<NavMeshAgent>();
 		soundWave = GetComponent<S_SoundWave>();
+
 		navAgent.speed = moveSpeed;
 		navAgent.stoppingDistance = 1.0f;
 		rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
+		attackArm.enabled = false;
+		attackArm.isTrigger = true;
 	}
 	
 	// Update is called once per frame
@@ -158,7 +168,14 @@ public class S_Walker_AI : MonoBehaviour
 			// attack player
 			else if(Vector3.Distance(transform.position, playerPos) <= attackRange)
 			{
-				/////////////////// run attack code method here ////////////////////////////////////////////////////
+				attackTimer += Time.deltaTime;
+				if(attackTimer > attackRate)
+				{
+					attackTimer = 0.0f;
+					attackArm.enabled = true;
+				}
+				else
+					attackArm.enabled = false;
 			}
 			// player is within awareness range
 			else
@@ -185,8 +202,11 @@ public class S_Walker_AI : MonoBehaviour
 
 	void OnDrawGizmosSelected() 
 	{
-		Gizmos.color = Color.blue;
+		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere(targetPos, 0.5f);
+
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawWireSphere(transform.position, sightLength);
 	}
 
 	// returns a random float within a higher and lower percentage of the original value

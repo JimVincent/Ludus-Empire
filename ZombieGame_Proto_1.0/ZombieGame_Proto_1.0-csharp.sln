@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{31699863-ED20-8A37-A3F4-521176AF1170}") = "ZombieGame_Proto_1.0", "Assembly-CSharp-vs.csproj", "{56252D87-EBDC-4399-E3A1-9F9ADC204915}"
 EndProject
+Project("{31699863-ED20-8A37-A3F4-521176AF1170}") = "ZombieGame_Proto_1.0", "Assembly-CSharp-Editor-vs.csproj", "{654F2B89-85D3-C985-EBC8-D497B30BB938}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,11 +15,15 @@ Global
 		{56252D87-EBDC-4399-E3A1-9F9ADC204915}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56252D87-EBDC-4399-E3A1-9F9ADC204915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56252D87-EBDC-4399-E3A1-9F9ADC204915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{654F2B89-85D3-C985-EBC8-D497B30BB938}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{654F2B89-85D3-C985-EBC8-D497B30BB938}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{654F2B89-85D3-C985-EBC8-D497B30BB938}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{654F2B89-85D3-C985-EBC8-D497B30BB938}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																				GlobalSection(MonoDevelopProperties) = preSolution
+																																		GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
