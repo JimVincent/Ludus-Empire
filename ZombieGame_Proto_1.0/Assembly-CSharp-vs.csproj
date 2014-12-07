@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Player\S_PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\S_Player_Torch.cs" />
      <Compile Include="Assets\Scripts\UI\S_InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\UI\S_Menu_Buttons.cs" />
      <Compile Include="Assets\Scripts\Weapons\GunShoot.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_FlameTrigger.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_Grenade_Ammo.cs" />
