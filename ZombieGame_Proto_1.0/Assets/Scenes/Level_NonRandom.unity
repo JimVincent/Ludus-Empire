@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -682,7 +682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -5011,7 +5011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -5210,7 +5210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
@@ -5597,7 +5597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
