@@ -165,10 +165,10 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: 96ca6ac545fd631489dca1b625ba2497, type: 3}
     chance: 100
   requestItems:
-  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
@@ -426,7 +426,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -685,7 +685,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -1544,7 +1544,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 602458775}
   m_LocalRotation: {x: -3.09086232e-08, y: -.707106829, z: -.707106829, w: -3.09086232e-08}
-  m_LocalPosition: {x: -2.74003577, y: 8.88811588, z: 2.52847219}
+  m_LocalPosition: {x: -2.74003577, y: 8.88811588, z: -.163788915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2095256522}
@@ -1897,7 +1897,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 734603763}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .554286957, y: 9.91243076, z: 1.79779196}
+  m_LocalPosition: {x: .554286957, y: 9.91243076, z: -.524641812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1138272781}
@@ -2021,7 +2021,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 763149469}
   m_LocalRotation: {x: .280563384, y: -.649064124, z: -.649064064, w: .280563533}
-  m_LocalPosition: {x: -2.00957704, y: 12.4531002, z: 3.31908941}
+  m_LocalPosition: {x: -2.00957227, y: 12.4531059, z: .0661899075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 182995422}
@@ -2225,7 +2225,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 825874274}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: .106648445, y: 9.95180607, z: 4.2112751}
+  m_LocalPosition: {x: .106648445, y: 10.5051928, z: .330842346}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 88905223}
@@ -2703,7 +2703,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047635871}
   m_LocalRotation: {x: .666797638, y: .235331535, z: .235331535, w: .666797638}
-  m_LocalPosition: {x: -1.46385765, y: 10.3758936, z: 6.80798388}
+  m_LocalPosition: {x: -1.46385765, y: 10.3758936, z: .049408365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1852927507}
@@ -3008,7 +3008,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -3142,7 +3142,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1169576512}
   m_LocalRotation: {x: .670010328, y: -.226022601, z: -.226022646, w: .670010328}
-  m_LocalPosition: {x: .214058042, y: 9.4118557, z: 1.97194064}
+  m_LocalPosition: {x: .214057907, y: 9.4118557, z: -.264540434}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1978723}
@@ -3294,7 +3294,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -4148,7 +4148,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1553308495}
   m_LocalRotation: {x: .5, y: .5, z: .5, w: .5}
-  m_LocalPosition: {x: .992469788, y: 2.81097412, z: .115074158}
+  m_LocalPosition: {x: .992469788, y: 4.91898346, z: -.588905334}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1219278094}
@@ -4918,7 +4918,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1807223593}
   m_LocalRotation: {x: .196420476, y: -.679278255, z: -.679278314, w: .196420595}
-  m_LocalPosition: {x: 10.2235146, y: -1.9433043, z: -2.37136245}
+  m_LocalPosition: {x: 10.4646883, y: -1.79110205, z: -1.16594112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1811222020}
@@ -5014,10 +5014,10 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
-  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
@@ -5213,7 +5213,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -5600,7 +5600,7 @@ MonoBehaviour:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
     chance: 100
   carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
@@ -5694,6 +5694,7 @@ GameObject:
   - 4: {fileID: 2124672785}
   - 108: {fileID: 2124672784}
   - 114: {fileID: 2124672786}
+  - 82: {fileID: 2124672787}
   m_Layer: 0
   m_Name: P_Sun_DLight
   m_TagString: Untagged
@@ -5759,5 +5760,65 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cbaefe66ef5094d90192f709367770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minutesInDay: 1
-  minutesInNight: 1
+  minutesInDay: .340000004
+  minutesInNight: .349999994
+  aDawnClip: {fileID: 8300000, guid: 66edc00fe82fc7342807503f5d304363, type: 3}
+  aDuskClip: {fileID: 8300000, guid: 64ac2eac5b3fc0a4a82a175252c6d7cb, type: 3}
+--- !u!82 &2124672787
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2124672783}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2

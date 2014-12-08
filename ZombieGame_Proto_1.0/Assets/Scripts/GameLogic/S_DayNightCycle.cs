@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class S_DayNightCycle : MonoBehaviour 
 {
 	public enum DayState{day, night};
@@ -14,8 +15,14 @@ public class S_DayNightCycle : MonoBehaviour
 	public float minutesInDay = 3.20f;		// *note* 2.2 minutes = 2 mins and 20 seconds
 	public float minutesInNight = 2.40f;
 
+	// audio clips
+	public AudioClip aDawnClip;
+	public AudioClip aDuskClip;
+
+	private AudioSource aSource;
 	private float currentSpeed;
 	private GameObject sun;
+	private bool playOnce = false;
 
 	// Use this for initialization
 	void Start () 
@@ -24,6 +31,11 @@ public class S_DayNightCycle : MonoBehaviour
 		currentSpeed = 180 / MinutesToSeconds(minutesInDay);
 		transform.eulerAngles = new Vector3 (0.0f, transform.eulerAngles.y, transform.eulerAngles.z);
 		tUntilNewDay = MinutesToSeconds(minutesInDay) + MinutesToSeconds(minutesInNight);
+
+		// set up audio
+		aSource = GetComponent<AudioSource>();
+		aSource.loop = false;
+		aSource.playOnAwake = false;
 	}
 
 	// Update is called once per frame
@@ -38,6 +50,11 @@ public class S_DayNightCycle : MonoBehaviour
 		{
 			tUntilNewDay = MinutesToSeconds(minutesInDay) + MinutesToSeconds(minutesInNight);
 			dayCount++;
+
+			// play morning audio
+			aSource.clip = aDawnClip;
+			aSource.Play();
+			playOnce = false;
 		}
 
 		// transition through states
@@ -45,6 +62,14 @@ public class S_DayNightCycle : MonoBehaviour
 		{
 			dayState = DayState.night;
 			currentSpeed = 180 / MinutesToSeconds(minutesInNight);
+
+			// play night audio
+			if(!playOnce)
+			{
+				aSource.clip = aDuskClip;
+				aSource.Play();
+				playOnce = true;
+			}
 		}
 		else if(transform.eulerAngles.x < 270)
 		{
