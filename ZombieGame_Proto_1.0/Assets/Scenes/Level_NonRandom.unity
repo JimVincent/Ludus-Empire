@@ -162,14 +162,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
-    chance: 100
+  - prefab: {fileID: 100000, guid: 5421f1dd8613e1348be7f283e5ffdc16, type: 2}
+    chance: 30
+  - prefab: {fileID: 100000, guid: 1be917ea00188304692686482f460a0d, type: 2}
+    chance: 70
   carParts:
   - prefab: {fileID: 100000, guid: 96ca6ac545fd631489dca1b625ba2497, type: 3}
-    chance: 100
+    chance: 40
+  - prefab: {fileID: 100000, guid: 96ca6ac545fd631489dca1b625ba2497, type: 3}
+    chance: 35
+  - prefab: {fileID: 100000, guid: 96ca6ac545fd631489dca1b625ba2497, type: 3}
+    chance: 25
   requestItems:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
+    chance: 40
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 60
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -423,8 +431,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
-    chance: 100
+  - prefab: {fileID: 100006, guid: 430a086b0aa1ff749a53b0cae27114d2, type: 2}
+    chance: 45
+  - prefab: {fileID: 100000, guid: 5421f1dd8613e1348be7f283e5ffdc16, type: 2}
+    chance: 55
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
@@ -995,14 +1005,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
-    chance: 100
+  - prefab: {fileID: 100000, guid: 5421f1dd8613e1348be7f283e5ffdc16, type: 2}
+    chance: 25
+  - prefab: {fileID: 100000, guid: 1be917ea00188304692686482f460a0d, type: 2}
+    chance: 75
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
+    chance: 75
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 25
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+    chance: 20
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 40
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 40
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -3834,14 +3852,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
-    chance: 100
+  - prefab: {fileID: 100000, guid: 5f6fe35fc15ff334f94aa0e49ef83716, type: 2}
+    chance: 60
+  - prefab: {fileID: 100000, guid: 1be917ea00188304692686482f460a0d, type: 2}
+    chance: 40
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
+    chance: 60
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 40
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+    chance: 25
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 25
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 50
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -3893,15 +3919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 072077a43d6ccbd47825804243e0f983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
-    chance: 100
-  carParts:
-  - prefab: {fileID: 100000, guid: 48177777263ab7143a2c23e39039c61b, type: 2}
-    chance: 100
-  requestItems:
-  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+  items: []
+  carParts: []
+  requestItems: []
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -4120,14 +4140,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
+  - prefab: {fileID: 100000, guid: 1be917ea00188304692686482f460a0d, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
+    chance: 35
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 40
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 25
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+    chance: 65
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 35
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -4180,7 +4206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: 32d058b31d6a38345bbc8d8892412d4e, type: 2}
+  - prefab: {fileID: 100000, guid: ce264a73328295c4a81acdb40a79dca9, type: 2}
     chance: 100
   carParts: []
   requestItems:
@@ -7535,10 +7561,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items:
   - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
-    chance: 100
+    chance: 20
+  - prefab: {fileID: 100000, guid: 5421f1dd8613e1348be7f283e5ffdc16, type: 2}
+    chance: 35
+  - prefab: {fileID: 100000, guid: 1be917ea00188304692686482f460a0d, type: 2}
+    chance: 25
+  - prefab: {fileID: 100000, guid: a025118f8047e164b9d243e1db8f23a1, type: 2}
+    chance: 20
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
+    chance: 60
+  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
+    chance: 40
   requestItems:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
@@ -7733,14 +7767,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
+  - prefab: {fileID: 100000, guid: ce264a73328295c4a81acdb40a79dca9, type: 2}
     chance: 100
-  carParts:
-  - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
-    chance: 100
-  requestItems:
-  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+  carParts: []
+  requestItems: []
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
@@ -8464,14 +8494,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
-  - prefab: {fileID: 100000, guid: c770f8bc825bb024f95634e08c27bd16, type: 2}
+  - prefab: {fileID: 100000, guid: 5421f1dd8613e1348be7f283e5ffdc16, type: 2}
     chance: 100
   carParts:
   - prefab: {fileID: 100000, guid: cd8d56469cf64654eaa21e15c6ae7c18, type: 3}
     chance: 100
   requestItems:
   - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
-    chance: 100
+    chance: 25
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 20
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 20
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 20
+  - prefab: {fileID: 100000, guid: 770e1970b066d7d4195365650028c7f1, type: 2}
+    chance: 15
   walkerPrefab: {fileID: 100002, guid: 3029850024d8fbb4d9a75de1bdab3457, type: 2}
   walkerSpawnRadius: 6
   easyZombCount: 3
