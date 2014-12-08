@@ -33,6 +33,7 @@ public class GunShoot : MonoBehaviour {
 	public float flamefuel = 0; //Max 5
 	public float maxFlameFuel;
 	public GameObject Flametrigger;
+	public GameObject flameFX;
 
 	//Grenade Launcher
 	public int grenadenumber = 0;
@@ -83,6 +84,7 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Pistol;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if(Input.GetKeyDown ("2") && inventory.gotAssault)
@@ -90,6 +92,7 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.MachineGun;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if (Input.GetKeyDown ("3") && inventory.gotFlame) 
@@ -103,10 +106,35 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Grenade;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
 			Application.LoadLevel("Level2"); 
+
+		//Grenade Timer
+		if (grenadeReleased == true && hasExploded == false) 
+		{
+			blastTimer += Time.deltaTime;
+			if (blastTimer >= grenadeTimer)
+			{
+				temp = (GameObject)Instantiate (explosion,gameObject.transform.position, gameObject.transform.rotation);
+				hasExploded = true;
+				blastTimer = 0.0f;
+			}
+		}
+
+		//Grenade Explosion
+		if(hasExploded == true)
+		{
+			Destroy (temp);
+			ExplodeEffect (shotGrenade);
+			AreaDamage (shotGrenade.transform.position);
+			shotGrenade.SetActive (false);
+			Destroy (shotGrenade);
+			hasExploded = false;
+			grenadeReleased = false;
+		}
 
 		switch (curState) 
 		{
@@ -250,34 +278,11 @@ public class GunShoot : MonoBehaviour {
 	{
 			if(Input.GetMouseButtonDown(0) && grenadenumber >= 0 && !grenadeReleased)
 			{
-				
 				shotGrenade = (GameObject)Instantiate (grenade,gameObject.transform.position+transform.forward*2, gameObject.transform.rotation);
 				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*10, ForceMode.VelocityChange);
 				grenadeReleased = true;
                 grenadenumber --;
             }
-				if (grenadeReleased == true && hasExploded == false) 
-				{
-					//Grenade Timer
-					blastTimer += Time.deltaTime;
-					if (blastTimer >= grenadeTimer)
-					{
-						temp = (GameObject)Instantiate (explosion,gameObject.transform.position, gameObject.transform.rotation);
-						hasExploded = true;
-						blastTimer = 0.0f;
-					}
-				}
-
-				if(hasExploded == true)
-				{
-					Destroy (temp);
-					ExplodeEffect (shotGrenade);
-					AreaDamage (shotGrenade.transform.position);
-					shotGrenade.SetActive (false);
-					Destroy (shotGrenade);
-					hasExploded = false;
-					grenadeReleased = false;
-				}
 	}
 	/*	Do flame state
 	 * This gives the player the ability to slip into the flamethrower weapon and use it.
@@ -292,6 +297,7 @@ public class GunShoot : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) && flamefuel > 0)
 		{
 			Flametrigger.SetActive (true);
+			flameFX.SetActive(true);
 		}
 
 		if(Input.GetMouseButton(0) && flamefuel > 0)
@@ -302,6 +308,7 @@ public class GunShoot : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0) || flamefuel <= 0)
 		{
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 	}
 }

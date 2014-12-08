@@ -46,8 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Art Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Randomise_Buildings.cs" />
      <Compile Include="Assets\Level Assets\Level Scripts\S_Sector_Randomise.cs" />
+     <Compile Include="Assets\RoadTool\Scripts\Road.cs" />
      <Compile Include="Assets\Scripts\AI\S_Mechanic_AI.cs" />
      <Compile Include="Assets\Scripts\AI\S_NightWaves.cs" />
      <Compile Include="Assets\Scripts\AI\S_Runner_AI.cs" />
@@ -57,6 +59,7 @@
      <Compile Include="Assets\Scripts\GameLogic\S_PosTracker.cs" />
      <Compile Include="Assets\Scripts\Maze Objects\S_Broken_Glass.cs" />
      <Compile Include="Assets\Scripts\Maze Objects\S_Trash_Can.cs" />
+     <Compile Include="Assets\Scripts\Misc\S_SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Weapon_Pickups.cs" />
      <Compile Include="Assets\Scripts\Player\S_GameCamera.cs" />
@@ -69,8 +72,12 @@
      <Compile Include="Assets\Scripts\Weapons\S_FlameTrigger.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_Flamethrower_Ammo.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_Grenade_Ammo.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_Grenade_Explosion.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_MachineGun_Ammo.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_Medkit.cs" />
+     <None Include="Assets\RoadTool\Example\Texture\Texture Credits.txt" />
+     <None Include="Assets\RoadTool\README.txt" />
+     <None Include="Assets\RoadTool\Example\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
