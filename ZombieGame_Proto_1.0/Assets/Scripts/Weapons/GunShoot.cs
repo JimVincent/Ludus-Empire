@@ -10,26 +10,34 @@ public class GunShoot : MonoBehaviour {
 	public AudioClip changeWeapon;
 	public Color pistolCol, machineCol, grenadeCol, flamecol;
 	public GunState curState;
+	public GameObject bulletFXPrefab;
 
+	private GameObject bulletFX;
 	private Ray ray;
 	private RaycastHit hit;
 	private S_InventoryManager inventory;
+	private float machineTimer;
+	private LineRenderer bulletPath;
 	
 	//Pistol
 	public int pistolDamage = 25;
 	public float pistolFirerate = 1;
 
 	//Rifle
-	public int machgunbullets = 0; //Max 70
+	public int machgunbullets = 0;
+	public int maxMachBullets;
 	public int machineDamage = 15;
-	private float machineFirerate = 0.5f;	
+	public float machineFirerate = 0.5f;
 
 	//Flamethrower
 	public float flamefuel = 0; //Max 5
+	public float maxFlameFuel;
 	public GameObject Flametrigger;
+	public GameObject flameFX;
 
 	//Grenade Launcher
-	public int grenadenumber = 0; //Max 4
+	public int grenadenumber = 0;
+	public int maxGrenadeAmmo;
 	public int grenadeDamage = 100;
 	public GameObject grenade;
 	public GameObject explosion;
@@ -66,8 +74,6 @@ public class GunShoot : MonoBehaviour {
         blastTimer = 0.00f;
 
 		inventory = gameObject.transform.parent.GetComponent<S_InventoryManager>();
-		
-//		Flametrigger = gameObject.transform.GetChild (2).gameObject;
 	}
 	
 	// Update is called once per frame
@@ -78,6 +84,7 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Pistol;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if(Input.GetKeyDown ("2") && inventory.gotAssault)
@@ -85,6 +92,7 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.MachineGun;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if (Input.GetKeyDown ("3") && inventory.gotFlame) 
@@ -98,10 +106,35 @@ public class GunShoot : MonoBehaviour {
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Grenade;
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
 			Application.LoadLevel("Level2"); 
+
+		//Grenade Timer
+		if (grenadeReleased == true && hasExploded == false) 
+		{
+			blastTimer += Time.deltaTime;
+			if (blastTimer >= grenadeTimer)
+			{
+				temp = (GameObject)Instantiate (explosion,gameObject.transform.position, gameObject.transform.rotation);
+				hasExploded = true;
+				blastTimer = 0.0f;
+			}
+		}
+
+		//Grenade Explosion
+		if(hasExploded == true)
+		{
+			Destroy (temp);
+			ExplodeEffect (shotGrenade);
+			AreaDamage (shotGrenade.transform.position);
+			shotGrenade.SetActive (false);
+			Destroy (shotGrenade);
+			hasExploded = false;
+			grenadeReleased = false;
+		}
 
 		switch (curState) 
 		{
@@ -127,7 +160,15 @@ public class GunShoot : MonoBehaviour {
 	{
 		//GUI.DrawTexture(new Rect(Screen.width/2 - 50,Screen.height/2 - 50,100,100),Crosshair);
 	}
-			//changes for each different weapon
+			
+	void CreateBulletFX(float distanceToTarget){
+		bulletFX = Instantiate(bulletFXPrefab, transform.position, transform.rotation) as GameObject;
+		bulletPath = bulletFX.GetComponent<LineRenderer>();
+		bulletPath.SetPosition(0,transform.position);
+		bulletPath.SetPosition(1,transform.position + (distanceToTarget * transform.forward));
+	}
+
+	//changes for each different weapon
 	void DoPistolState()
 	{
 				//renderer.material.color = pistolCol;
@@ -137,12 +178,8 @@ public class GunShoot : MonoBehaviour {
 //						timedown = true;
 						if (Physics.Raycast (transform.position, this.transform.forward, out hit, Mathf.Infinity)) {
 								//Debug.DrawLine (Nozzle.transform.position, hit.point);
-				print (hit.collider.tag);
-
-//								shot.enabled = true;
-//								shot.SetVertexCount (2);
-//								shot.SetPosition (0, Nozzle.transform.position);
-//								shot.SetPosition (1, hit.point);
+								print (hit.collider.tag);
+								CreateBulletFX(hit.distance);								
 						}
 						if (hit.transform.tag == "Enemy") {
 							hit.transform.gameObject.GetComponent<S_Zombie_Health>().OnHit(pistolDamage);	
@@ -178,14 +215,15 @@ public class GunShoot : MonoBehaviour {
 	{		
 		if (Input.GetMouseButton(0) && machgunbullets > 0) 
 		{
-			machineFirerate += Time.deltaTime;
+			machineTimer += Time.deltaTime;
 
-			if (machineFirerate >= 0.5f)
+			if (machineTimer >= machineFirerate)
 			{
 //				timedown = true;
 				if (Physics.Raycast (transform.position, this.transform.forward, out hit, Mathf.Infinity))
 				{
 					print (hit.collider.tag);
+					CreateBulletFX(hit.distance);								
 				}
 				if (hit.transform.tag == "Enemy") 
 				{
@@ -194,7 +232,7 @@ public class GunShoot : MonoBehaviour {
 				}
 
 				machgunbullets --;
-				machineFirerate = 0;
+				machineTimer = 0;
 			}
 		}
 		if (Input.GetMouseButton (0) && machgunbullets <= 0) 
@@ -240,34 +278,11 @@ public class GunShoot : MonoBehaviour {
 	{
 			if(Input.GetMouseButtonDown(0) && grenadenumber >= 0 && !grenadeReleased)
 			{
-				
 				shotGrenade = (GameObject)Instantiate (grenade,gameObject.transform.position+transform.forward*2, gameObject.transform.rotation);
 				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*10, ForceMode.VelocityChange);
 				grenadeReleased = true;
                 grenadenumber --;
             }
-				if (grenadeReleased == true && hasExploded == false) 
-				{
-					//Grenade Timer
-					blastTimer += Time.deltaTime;
-					if (blastTimer >= grenadeTimer)
-					{
-						temp = (GameObject)Instantiate (explosion,gameObject.transform.position, gameObject.transform.rotation);
-						hasExploded = true;
-						blastTimer = 0.0f;
-					}
-				}
-
-				if(hasExploded == true)
-				{
-					Destroy (temp);
-					ExplodeEffect (shotGrenade);
-					AreaDamage (shotGrenade.transform.position);
-					shotGrenade.SetActive (false);
-					Destroy (shotGrenade);
-					hasExploded = false;
-					grenadeReleased = false;
-				}
 	}
 	/*	Do flame state
 	 * This gives the player the ability to slip into the flamethrower weapon and use it.
@@ -282,6 +297,7 @@ public class GunShoot : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) && flamefuel > 0)
 		{
 			Flametrigger.SetActive (true);
+			flameFX.SetActive(true);
 		}
 
 		if(Input.GetMouseButton(0) && flamefuel > 0)
@@ -292,6 +308,7 @@ public class GunShoot : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0) || flamefuel <= 0)
 		{
 			Flametrigger.SetActive (false);
+			flameFX.SetActive(false);
 		}
 	}
 }

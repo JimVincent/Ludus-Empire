@@ -4,10 +4,11 @@ using System.Collections;
 public class S_Grenade_Ammo : MonoBehaviour {
 
 	public GunShoot gunscript;
+	public int ammoAmount;
 
 	// Use this for initialization
 	void Start () {
-		gunscript = GameObject.Find ("vincent").GetComponent<GunShoot> ();
+		gunscript = GameObject.Find ("P_Player_PlaceHolder").GetComponentInChildren<GunShoot> ();
 	}
 	
 	// Update is called once per frame
@@ -15,9 +16,14 @@ public class S_Grenade_Ammo : MonoBehaviour {
 	}	
 	void OnTriggerEnter (Collider col)
 	{
-		if(col.transform.tag == "Player" && gunscript.grenadenumber <= 3)
+		if(col.transform.tag == "Player" && gunscript.grenadenumber < gunscript.maxGrenadeAmmo)
 		{
-			gunscript.grenadenumber ++;
+			gunscript.grenadenumber += ammoAmount;
+			if(gunscript.grenadenumber > gunscript.maxGrenadeAmmo){
+				gunscript.grenadenumber = gunscript.maxGrenadeAmmo;
+			}
+
+			Destroy(gameObject);
 		}
 	}
 }
