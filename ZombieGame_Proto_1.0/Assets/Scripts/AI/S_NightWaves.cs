@@ -13,17 +13,10 @@ public class S_NightWaves : MonoBehaviour {
 	
 	private List<GameObject> zombies = new List<GameObject>();
 
-
 	// starting amount
 	private int quantity = 5;
 	private float timer = 0.0f;
 	private bool callOnce;
-
-	// Use this for initialization
-	void Start () 
-	{
-
-	}
 	
 	// Update is called once per frame
 	void Update () 
@@ -40,11 +33,15 @@ public class S_NightWaves : MonoBehaviour {
 				timer += Time.deltaTime;
 				if(timer >= spawnRate)
 				{
-					int dice = Random.Range(0, spawnPos.Length);
-
+					int pos = 0;
 					for(int i = 0; i < quantity; i++)
 					{
 						zombies.Add(((GameObject)Instantiate(runnerPrefab, spawnPos[dice].position, Quaternion.identity)));
+						
+						if(pos < spawnPos.Length - 1)
+							pos++;
+						else
+							pos = 0;
 					}
 					timer = 0.0f;
 				}
