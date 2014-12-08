@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class S_Grenade_Ammo : MonoBehaviour {
+public class S_MachineGun_Ammo : MonoBehaviour {
 
 	public GunShoot gunscript;
 	public int ammoAmount;
@@ -16,11 +16,12 @@ public class S_Grenade_Ammo : MonoBehaviour {
 	}	
 	void OnTriggerEnter (Collider col)
 	{
-		if(col.transform.tag == "Player" && gunscript.grenadenumber < gunscript.maxGrenadeAmmo)
+		if(col.transform.tag == "Player" && gunscript.machgunbullets < gunscript.maxMachBullets)
 		{
-			gunscript.grenadenumber += ammoAmount;
-			if(gunscript.grenadenumber > gunscript.maxGrenadeAmmo){
-				gunscript.grenadenumber = gunscript.maxGrenadeAmmo;
+			gunscript.machgunbullets += ammoAmount;
+			if (gunscript.machgunbullets > gunscript.maxMachBullets)
+			{
+				gunscript.machgunbullets = gunscript.maxMachBullets;
 			}
 
 			Destroy(gameObject);

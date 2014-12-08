@@ -65,9 +65,12 @@
      <Compile Include="Assets\Scripts\UI\S_InventoryManager.cs" />
      <Compile Include="Assets\Scripts\UI\S_Menu_Buttons.cs" />
      <Compile Include="Assets\Scripts\Weapons\GunShoot.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_FX_SelfDestuct.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_FlameTrigger.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_Flamethrower_Ammo.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_Grenade_Ammo.cs" />
-     <Compile Include="Assets\Scripts\Weapons\S_Grenade_Movement.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_MachineGun_Ammo.cs" />
+     <Compile Include="Assets\Scripts\Weapons\S_Medkit.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

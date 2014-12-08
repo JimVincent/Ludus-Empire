@@ -10,27 +10,33 @@ public class GunShoot : MonoBehaviour {
 	public AudioClip changeWeapon;
 	public Color pistolCol, machineCol, grenadeCol, flamecol;
 	public GunState curState;
+	public GameObject bulletFXPrefab;
 
+	private GameObject bulletFX;
 	private Ray ray;
 	private RaycastHit hit;
 	private S_InventoryManager inventory;
 	private float machineTimer;
+	private LineRenderer bulletPath;
 	
 	//Pistol
 	public int pistolDamage = 25;
 	public float pistolFirerate = 1;
 
 	//Rifle
-	public int machgunbullets = 0; //Max 70
+	public int machgunbullets = 0;
+	public int maxMachBullets;
 	public int machineDamage = 15;
 	public float machineFirerate = 0.5f;
 
 	//Flamethrower
 	public float flamefuel = 0; //Max 5
+	public float maxFlameFuel;
 	public GameObject Flametrigger;
 
 	//Grenade Launcher
-	public int grenadenumber = 0; //Max 4
+	public int grenadenumber = 0;
+	public int maxGrenadeAmmo;
 	public int grenadeDamage = 100;
 	public GameObject grenade;
 	public GameObject explosion;
@@ -67,8 +73,6 @@ public class GunShoot : MonoBehaviour {
         blastTimer = 0.00f;
 
 		inventory = gameObject.transform.parent.GetComponent<S_InventoryManager>();
-		
-//		Flametrigger = gameObject.transform.GetChild (2).gameObject;
 	}
 	
 	// Update is called once per frame
@@ -128,7 +132,15 @@ public class GunShoot : MonoBehaviour {
 	{
 		//GUI.DrawTexture(new Rect(Screen.width/2 - 50,Screen.height/2 - 50,100,100),Crosshair);
 	}
-			//changes for each different weapon
+			
+	void CreateBulletFX(float distanceToTarget){
+		bulletFX = Instantiate(bulletFXPrefab, transform.position, transform.rotation) as GameObject;
+		bulletPath = bulletFX.GetComponent<LineRenderer>();
+		bulletPath.SetPosition(0,transform.position);
+		bulletPath.SetPosition(1,transform.position + (distanceToTarget * transform.forward));
+	}
+
+	//changes for each different weapon
 	void DoPistolState()
 	{
 				//renderer.material.color = pistolCol;
@@ -138,12 +150,8 @@ public class GunShoot : MonoBehaviour {
 //						timedown = true;
 						if (Physics.Raycast (transform.position, this.transform.forward, out hit, Mathf.Infinity)) {
 								//Debug.DrawLine (Nozzle.transform.position, hit.point);
-				print (hit.collider.tag);
-
-//								shot.enabled = true;
-//								shot.SetVertexCount (2);
-//								shot.SetPosition (0, Nozzle.transform.position);
-//								shot.SetPosition (1, hit.point);
+								print (hit.collider.tag);
+								CreateBulletFX(hit.distance);								
 						}
 						if (hit.transform.tag == "Enemy") {
 							hit.transform.gameObject.GetComponent<S_Zombie_Health>().OnHit(pistolDamage);	
@@ -187,6 +195,7 @@ public class GunShoot : MonoBehaviour {
 				if (Physics.Raycast (transform.position, this.transform.forward, out hit, Mathf.Infinity))
 				{
 					print (hit.collider.tag);
+					CreateBulletFX(hit.distance);								
 				}
 				if (hit.transform.tag == "Enemy") 
 				{
