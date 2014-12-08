@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Misc\S_SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Weapon_Pickups.cs" />
+     <Compile Include="Assets\Scripts\Player\S_CarControl.cs" />
      <Compile Include="Assets\Scripts\Player\S_GameCamera.cs" />
      <Compile Include="Assets\Scripts\Player\S_PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\S_Player_Torch.cs" />

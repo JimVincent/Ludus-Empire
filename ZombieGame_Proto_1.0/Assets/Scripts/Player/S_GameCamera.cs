@@ -6,9 +6,17 @@ public class S_GameCamera : MonoBehaviour
 
 	private Vector3 cameraTarget;
 
-	private Transform target;
+	public Transform target;
+
+	public static S_GameCamera inst;
+
+	void Awake()
+	{
+		inst = this;
+	}
 	
-	void Start () {
+	void Start ()
+	{
 		target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 

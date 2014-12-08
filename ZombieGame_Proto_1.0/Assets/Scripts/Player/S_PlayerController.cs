@@ -4,8 +4,15 @@ using System.Collections;
 [RequireComponent (typeof (CharacterController))]
 public class S_PlayerController : MonoBehaviour
 {
-	//character
+	public static S_PlayerController inst;
+
+	//game objects
+	public GameObject player;
+	public GameObject car;
+
+	//character vars
 	public float playerHP = 100;
+	public bool inCar = false;
 
 	//control
 	public float rotationSpeed = 500;
@@ -16,8 +23,17 @@ public class S_PlayerController : MonoBehaviour
 	private Quaternion targetRotation;
 	private CharacterController controller;
 	private Camera cam;
+
+	//car
+	public float acceleration = 60f;
+	private float steering;
 	
 	public GameObject primaryWeaponBullet;
+
+	void Awake()
+	{
+		inst = this;
+	}
 
 	void Start ()
 	{
@@ -25,9 +41,18 @@ public class S_PlayerController : MonoBehaviour
 		cam = Camera.main;
 	}
 
-	void Update ()
+	void FixedUpdate ()
 	{
-		ControlMouse();
+		if (inCar == false)
+		{
+			ControlPlayer();
+		}
+
+		if (inCar == true)
+		{
+			player.SetActive (false);
+			car.SetActive (true);
+		}
 	
 	//player death (place holder)
 		if (playerHP <= 0) 
@@ -45,10 +70,11 @@ public class S_PlayerController : MonoBehaviour
 //		}
 
 	}
-	//faces the character towards the mouse position
-	void ControlMouse()
-	{
 
+	#region Player
+	//faces the character towards the mouse position
+	void ControlPlayer()
+	{
 		Vector3 mousePos = Input.mousePosition;
 		mousePos = cam.ScreenToWorldPoint(new Vector3(mousePos.x,mousePos.y,cam.transform.position.y - transform.position.y));
 		targetRotation = Quaternion.LookRotation(mousePos - new Vector3(transform.position.x,0,transform.position.z));
@@ -63,7 +89,32 @@ public class S_PlayerController : MonoBehaviour
 		
 		controller.Move(motion * Time.deltaTime);
 	}
+	#endregion
 
+	#region car control
+	void ControlCar()
+	{
+		//make steering relative to velocity
+		steering = Input.GetAxis("Vertical");
+		
+		float rot = transform.localEulerAngles.y + Input.GetAxis("Horizontal") * steering;
+		
+		//turn the gameobject
+		transform.localEulerAngles = new Vector3(0.0f, rot, 0.0f);
+		
+		// apply car movement
+		rigidbody.AddForce(transform.forward * Input.GetAxis("Vertical") * acceleration * 50.0f * Time.deltaTime);
+	}
+	#endregion
+
+	void OnTriggerEnter(Collider temp)
+	{
+		//destroy any objects hit by the car
+		temp.SendMessage ("AddDamage", 100f, SendMessageOptions.DontRequireReceiver);
+	}
+
+
+	#region send messages
 	//send message place holders
 		void OnBumpIntoEnemy(float dmg)
 		{
@@ -79,4 +130,5 @@ public class S_PlayerController : MonoBehaviour
 		{
 			//add ammo / hp etc
 		}
+	#endregion
 }
