@@ -10,9 +10,7 @@ public class S_Car_Maintenance : MonoBehaviour
 
 	// inspector variables
 	public float fixRate = 2.0f;
-
-	// private variables
-	private float fixValue = 0;
+	public float fixValue = 0;
 	
 	public void Update()
 	{

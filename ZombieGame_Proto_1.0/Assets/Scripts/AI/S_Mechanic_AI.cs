@@ -19,6 +19,8 @@ public class S_Mechanic_AI : MonoBehaviour
 	public AudioClip openingDialogue;
 	public AudioClip closingDialogue;
 
+	public S_Player_Items itemScript;
+
 	private AudioSource aSource;
 	private bool activeRequest;
 	private float inTimer = 0.0f;
@@ -32,14 +34,15 @@ public class S_Mechanic_AI : MonoBehaviour
 		// set up audio source
 		aSource = GetComponent<AudioSource>();
 		aSource.playOnAwake = false;
+
+		//Grab item script
+		itemScript = GameObject.Find("P_Player_PlaceHolder").GetComponent<S_Player_Items>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		float pDist = Vector3.Distance (transform.position, S_PosTracker.playerPos);
-
-		activeRequest = S_Car_Maintenance.fixing;
 
 		// reset timers
 		if(aSource.isPlaying)
@@ -120,6 +123,10 @@ public class S_Mechanic_AI : MonoBehaviour
 	// switches request state
 	public void CheckRequest()
 	{
+		if(itemScript.carPartValue > 0){
+			itemScript.OnMechanicReturn();
+		}
+
 		// check static bool request 
 
 //		if(activeRequest)// && static bool == false)
