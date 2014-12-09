@@ -49,6 +49,9 @@ public class GunShoot : MonoBehaviour {
 	private bool hasExploded = false;
 	private bool grenadeReleased = false;
 
+	//Audio
+	public AudioClip pistolShot, rifleShot, grenadeShot, grenadeExplosion;
+	public AudioSource flameAudio;
 
 	//Not Needed
 		//public bool outofammo;
@@ -75,6 +78,8 @@ public class GunShoot : MonoBehaviour {
 		S_HUD_Manager.inst.assaultMaxAmmo = maxMachBullets;
 		S_HUD_Manager.inst.fameTMaxAmmo = maxFlameFuel;
 		S_HUD_Manager.inst.gLaunchMaxAmmo = maxGrenadeAmmo;
+
+		flameAudio = gameObject.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -91,6 +96,7 @@ public class GunShoot : MonoBehaviour {
 			curState = GunState.Pistol;
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
+			flameAudio.Stop();
 		}
 
 		if(Input.GetKeyDown ("2") && S_HUD_Manager.inst.gotAssault)
@@ -99,6 +105,7 @@ public class GunShoot : MonoBehaviour {
 			curState = GunState.MachineGun;
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
+			flameAudio.Stop();
 		}
 
 		if (Input.GetKeyDown ("3") && S_HUD_Manager.inst.gotFlame) 
@@ -113,6 +120,7 @@ public class GunShoot : MonoBehaviour {
 			curState = GunState.Grenade;
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
+			flameAudio.Stop();
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
@@ -140,6 +148,7 @@ public class GunShoot : MonoBehaviour {
 			Destroy (shotGrenade);
 			hasExploded = false;
 			grenadeReleased = false;
+			AudioSource.PlayClipAtPoint(grenadeExplosion,shotGrenade.transform.position);
 		}
 
 		switch (curState) 
@@ -214,6 +223,7 @@ public class GunShoot : MonoBehaviour {
 //						if (fired == true){
 //								time = 1;
 //						}
+						AudioSource.PlayClipAtPoint(pistolShot,transform.position);
 				}
 		}
 
@@ -239,6 +249,8 @@ public class GunShoot : MonoBehaviour {
 
 				machgunbullets --;
 				machineTimer = 0;
+
+				AudioSource.PlayClipAtPoint(rifleShot,transform.position);
 			}
 		}
 		if (Input.GetMouseButton (0) && machgunbullets <= 0) 
@@ -288,6 +300,7 @@ public class GunShoot : MonoBehaviour {
 				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*10, ForceMode.VelocityChange);
 				grenadeReleased = true;
                 grenadenumber --;
+				AudioSource.PlayClipAtPoint(grenadeShot,transform.position);
             }
 	}
 	/*	Do flame state
@@ -304,6 +317,7 @@ public class GunShoot : MonoBehaviour {
 		{
 			Flametrigger.SetActive (true);
 			flameFX.SetActive(true);
+			flameAudio.Play();
 		}
 
 		if(Input.GetMouseButton(0) && flamefuel > 0)
@@ -315,6 +329,7 @@ public class GunShoot : MonoBehaviour {
 		{
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
+			flameAudio.Stop();
 		}
 	}
 }

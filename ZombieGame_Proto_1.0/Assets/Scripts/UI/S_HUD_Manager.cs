@@ -82,8 +82,8 @@ public class S_HUD_Manager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-        healthBarFull = healthBarObj.localscale.x;
-        ammoBarFull = flameFuelBar.localscale.x;
+        healthBarFull = healthBarObj.transform.localScale.x;
+        ammoBarFull = flameFuelBar.transform.localScale.x;
 
 		mGunObj.SetActive(false);
 		flameThrowerObj.SetActive(false);
