@@ -213,7 +213,7 @@ public class S_HUD_Manager : MonoBehaviour
 		//update grenade count
 		for (int i = 0; i < gLaunchMaxAmmo; i++)
 		{
-			grenadeObjs[i].SetActive(true);
+			//grenadeObjs[i].SetActive(true);
 		}
 	}
 

@@ -801,7 +801,7 @@ MonoBehaviour:
   machineCol: {r: 0, g: 0, b: 0, a: 0}
   grenadeCol: {r: 0, g: 0, b: 0, a: 0}
   flamecol: {r: 0, g: 0, b: 0, a: 0}
-  curState: 3
+  curState: 0
   bulletFXPrefab: {fileID: 100000, guid: 961e6a711be82cf4d82aad9e7c30469d, type: 2}
   pistolDamage: 25
   pistolFirerate: 1
@@ -809,7 +809,7 @@ MonoBehaviour:
   maxMachBullets: 70
   machineDamage: 15
   machineFirerate: .200000003
-  flamefuel: 12
+  flamefuel: 0
   maxFlameFuel: 5
   Flametrigger: {fileID: 1066365895}
   flameFX: {fileID: 1340885736}
@@ -2092,7 +2092,6 @@ GameObject:
   - 23: {fileID: 565971599}
   - 114: {fileID: 565971598}
   - 143: {fileID: 565971597}
-  - 114: {fileID: 565971596}
   - 114: {fileID: 565971595}
   m_Layer: 0
   m_Name: P_Player_PlaceHolder
@@ -2137,18 +2136,6 @@ MonoBehaviour:
   runSpeed: 8
   acceleration: 60
   primaryWeaponBullet: {fileID: 0}
---- !u!114 &565971596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400006, guid: d8232d675c62200418e8f2a7064cf11c,
-    type: 2}
-  m_PrefabInternal: {fileID: 696981818}
-  m_GameObject: {fileID: 565971593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 410d44ee0ccf16a46b9bd1cadb923b87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!143 &565971597
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2506,14 +2493,6 @@ Prefab:
       propertyPath: m_RootMapOrder
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d8232d675c62200418e8f2a7064cf11c, type: 2}
-      propertyPath: curState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 11400004, guid: d8232d675c62200418e8f2a7064cf11c, type: 2}
-      propertyPath: flamefuel
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 100018, guid: d8232d675c62200418e8f2a7064cf11c, type: 2}
       propertyPath: m_IsActive
       value: 1
@@ -2538,7 +2517,8 @@ Prefab:
       propertyPath: m_Mass
       value: 3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400006, guid: d8232d675c62200418e8f2a7064cf11c, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d8232d675c62200418e8f2a7064cf11c, type: 2}
   m_RootGameObject: {fileID: 1352939886}
   m_IsPrefabParent: 0
