@@ -1,16 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameLogic\C_Building.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Player\S_Player_Items.cs">
     <Files>
-      <File FileName="Assets\Scripts\Weapons\GunShoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AI\S_Runner_AI.cs" Line="87" Column="1" />
-      <File FileName="Assets\Scripts\Player\S_PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\S_WinLose.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameLogic\S_Win_Trigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\S_Menu_Buttons.cs" Line="51" Column="1" />
-      <File FileName="Assets\Scripts\UI\S_Back_To_Menu.cs" Line="21" Column="33" />
-      <File FileName="Assets\Scripts\Player\S_GameCamera.cs" Line="24" Column="86" />
-      <File FileName="Assets\Scripts\GameLogic\C_Building.cs" Line="67" Column="94" />
+      <File FileName="Assets\Scripts\GameLogic\S_Car_Maintenance.cs" Line="13" Column="8" />
+      <File FileName="Assets\Scripts\Player\S_Player_Items.cs" Line="20" Column="1" />
+      <File FileName="Assets\Scripts\AI\S_Mechanic_AI.cs" Line="126" Column="35" />
+      <File FileName="Assets\Scripts\Pickups\S_Car_Pickups.cs" Line="24" Column="3" />
+      <File FileName="Assets\Scripts\Pickups\S_Misc_Pickups.cs" Line="13" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

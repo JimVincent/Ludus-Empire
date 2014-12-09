@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\AI\S_Zombie_Health.cs" />
      <Compile Include="Assets\Scripts\GameLogic\C_Building.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_Building_Manage.cs" />
+     <Compile Include="Assets\Scripts\GameLogic\S_Car_Maintenance.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_DayNightCycle.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_PosTracker.cs" />
      <Compile Include="Assets\Scripts\GameLogic\S_Win_Trigger.cs" />
@@ -71,14 +72,17 @@
      <Compile Include="Assets\Scripts\Maze Objects\S_Trash_Can.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />
+     <Compile Include="Assets\Scripts\Pickups\S_Car_Pickups.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Flamethrower_Ammo.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Grenade_Ammo.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_MachineGun_Ammo.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Medkit.cs" />
+     <Compile Include="Assets\Scripts\Pickups\S_Misc_Pickups.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Weapon_Pickups.cs" />
      <Compile Include="Assets\Scripts\Player\S_CarControl.cs" />
      <Compile Include="Assets\Scripts\Player\S_GameCamera.cs" />
      <Compile Include="Assets\Scripts\Player\S_PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Player\S_Player_Items.cs" />
      <Compile Include="Assets\Scripts\Player\S_Player_Torch.cs" />
      <Compile Include="Assets\Scripts\UI\S_Back_To_Menu.cs" />
      <Compile Include="Assets\Scripts\UI\S_InventoryManager.cs" />

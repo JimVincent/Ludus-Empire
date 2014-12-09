@@ -171,6 +171,7 @@ GameObject:
   - 143: {fileID: 14300000}
   - 114: {fileID: 11400006}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400012}
   m_Layer: 0
   m_Name: P_Player_PlaceHolder
   m_TagString: Player
@@ -309,7 +310,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.8867188, y: 8.29651546, z: -56.3058701}
+  m_LocalPosition: {x: -64.8867188, y: 8.31798935, z: -56.3058701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400002}
@@ -794,6 +795,19 @@ MonoBehaviour:
   runSpeed: 8
   acceleration: 60
   primaryWeaponBullet: {fileID: 0}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437da132ef1164f4f9cd525895070d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPartValue: 0
+  hasMisc: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
