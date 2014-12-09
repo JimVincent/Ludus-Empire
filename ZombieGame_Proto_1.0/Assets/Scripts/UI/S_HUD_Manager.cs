@@ -63,6 +63,10 @@ public class S_HUD_Manager : MonoBehaviour
 	public bool activeRequest;
 
 	private GameObject requestBuildObj;
+
+    //health and ammo bars
+    private float healthBarFull;
+    private float ammoBarFull;
 	
 	public void Awake()
 	{
@@ -72,6 +76,9 @@ public class S_HUD_Manager : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
+        healthBarFull = healthBarObj.localscale.x;
+        ammoBarFull = flameFuelBar.localscale.x;
+
 		mGunObj.setActive(false);
 		flameThrowerObj.setActive(false);
 		gLauncherObj.setActive(false);
@@ -85,7 +92,19 @@ public class S_HUD_Manager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		// active request state
+        //update machine gun ammo bar
+        if (flameFuelBar.activeSelf == true)
+        {
+            flameFuelBar.transform.localscale = new vector3 (ammoBarFull * (flameTAmmo / 100), flameThrowerObj.localscale.y, flameThrowerObj.localscale.z);
+        }
+
+        //update machine gun ammo bar
+        if (flameFuelBar.activeSelf == true)
+        {
+            flameFuelBar.transform.localscale = new vector3 (ammoBarFull * (flameTAmmo / 100), flameThrowerObj.localscale.y, flameThrowerObj.localscale.z);
+        }
+
+        // active request state
 		if(activeRequest)
 		{
 			requestItemPrefab.setActive(true);
@@ -169,6 +188,13 @@ public class S_HUD_Manager : MonoBehaviour
 				flameFuelBar.setActive(false);
 				mGunBulletsBar.setActive(false);
 				grenadeBar.setActive(true);
+
+                //update grenade count
+                for (int i = 0; i < gLauncherAmmo; i++)
+                {
+                    grenadeObjs[i].setActive(true);
+                }
+
 			break;
 			
 			default:
