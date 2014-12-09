@@ -64,7 +64,7 @@ public class C_Building : MonoBehaviour
 		Vector3 spawnPos = new Vector3(tempV.x, itemSpawner.transform.position.y, tempV.z);
 
 		// spawn obj sitting on ground level
-		currentItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
+		currentItem = (GameObject)Instantiate(activeItem, spawnPos, activeItem.transform.rotation);
 		Vector3 pos = currentItem.transform.position;
 	}
 
@@ -141,8 +141,10 @@ public class C_Building : MonoBehaviour
 		{
 			tempI += stock[i].chance;
 
-			if(diceRoll < tempI)
+			if(diceRoll < tempI){
 				tempGO = stock[i].prefab;
+				break;
+			}
 		}
 
 		return tempGO;
