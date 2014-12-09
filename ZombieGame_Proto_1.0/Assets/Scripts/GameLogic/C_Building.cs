@@ -65,7 +65,6 @@ public class C_Building : MonoBehaviour
 
 		// spawn obj sitting on ground level
 		currentItem = (GameObject)Instantiate(activeItem, spawnPos, Quaternion.identity);
-		Vector3 pos = currentItem.transform.position;
 	}
 
 	// halves the left over zombies
@@ -130,9 +129,7 @@ public class C_Building : MonoBehaviour
 	// returns a GO from the given stock based on chance
 	public GameObject NewStock(Item[] stock)
 	{
-		// Error item returned as pink cube
-		GameObject tempGO = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		tempGO.renderer.material.color = Color.magenta;
+		GameObject tempGO = null;
 
 		int diceRoll = Mathf.RoundToInt(Random.Range(1, 100));
 		int tempI = 0;

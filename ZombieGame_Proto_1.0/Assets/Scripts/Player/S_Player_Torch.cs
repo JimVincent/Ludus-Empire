@@ -11,7 +11,6 @@ public class S_Player_Torch : MonoBehaviour
 	public float blinkDuration = 0.18f;
 	
 	private GameObject torch;
-	private S_DayNightCycle.DayState dayState;
 	private float timer = 0.0f;
 
 	// Use this for initialization
@@ -35,8 +34,6 @@ public class S_Player_Torch : MonoBehaviour
 
 	void Update()
 	{
-		dayState = S_DayNightCycle.dayState;
-
 		// check for change of light
 		if(S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
 		{

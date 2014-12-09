@@ -39,6 +39,8 @@ public class S_Mechanic_AI : MonoBehaviour
 	{
 		float pDist = Vector3.Distance (transform.position, S_PosTracker.playerPos);
 
+		activeRequest = S_Car_Maintenance.fixing;
+
 		// reset timers
 		if(aSource.isPlaying)
 		{

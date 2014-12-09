@@ -52,7 +52,6 @@ public class S_Building_Manage : MonoBehaviour
 				// find a valid building
 				for(int i = 0; i < partsToSpawn; i++)
 				{
-					int usedBuilding;
 					while(!found)
 					{
 						int randomBuilding = Random.Range(0, buildings.Count);
