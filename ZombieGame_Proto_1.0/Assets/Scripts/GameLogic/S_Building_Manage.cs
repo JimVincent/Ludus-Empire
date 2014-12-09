@@ -9,6 +9,7 @@ public class S_Building_Manage : MonoBehaviour
 	public int carPartsPerDay = 2;
 
 	public List<C_Building> buildings = new List<C_Building>();
+	public List<C_Building> tents = new List<C_Building>();
 	private bool ItemsSpawned = false;
 
 	// Use this for initialization
@@ -31,11 +32,17 @@ public class S_Building_Manage : MonoBehaviour
 			// once per day
 			if(!ItemsSpawned)
 			{
-				// stock items for each
+				// stock items for each building
 				for(int i = 0; i < buildings.Count; i++)
 				{
 					buildings[i].SpawnItem(C_Building.ItemType.item);
 					buildings[i].HalveZombies();
+				}
+
+				// tents spawn only itmes
+				for(int i = 0; i < tents.Count; i++)
+				{
+					tents[i].SpawnItem(C_Building.ItemType.item);
 				}
 				
 				// stock parts
