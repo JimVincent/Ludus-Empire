@@ -48,9 +48,12 @@ public class S_HUD_Manager : MonoBehaviour
 	public GameObject workShopObj;
 
 	// weapon ammo
-	private int assaultRAmmo = 0;
-	private float flameTAmmo = 0.0f;
-	private int gLauncherAmmo = 0;
+	public int assaultRAmmo = 0;
+	public float flameTAmmo = 0.0f;
+	public int gLauncherAmmo = 0;
+	public int assaultMaxAmmo;
+	public float fameTMaxAmmo;
+	public int gLaunchMaxAmmo;
 
 	// acquired weapons
 	public bool gotAssault = false;
@@ -61,6 +64,9 @@ public class S_HUD_Manager : MonoBehaviour
 	public selectedWeapon equipedWeapon;
 	public building requestLocation;
 	public bool activeRequest;
+
+	public float playerHealth;
+	public float carHealth;
 
 	private GameObject requestBuildObj;
 
@@ -79,36 +85,40 @@ public class S_HUD_Manager : MonoBehaviour
         healthBarFull = healthBarObj.localscale.x;
         ammoBarFull = flameFuelBar.localscale.x;
 
-		mGunObj.setActive(false);
-		flameThrowerObj.setActive(false);
-		gLauncherObj.setActive(false);
+		mGunObj.SetActive(false);
+		flameThrowerObj.SetActive(false);
+		gLauncherObj.SetActive(false);
 		
-		handGunBulletBar.setActive(true);
-		flameFuelBar.setActive(false);
-		mGunBulletsBar.setActive(false);
-		grenadeObjs.setActive(false);
+		handGunBulletBar.SetActive(true);
+		flameFuelBar.SetActive(false);
+		mGunBulletsBar.SetActive(false);
+		grenadeBar.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-        //update machine gun ammo bar
-        if (flameFuelBar.activeSelf == true)
-        {
-            flameFuelBar.transform.localscale = new vector3 (ammoBarFull * (flameTAmmo / 100), flameThrowerObj.localscale.y, flameThrowerObj.localscale.z);
-        }
+        // update fuel ammo bar
+        if(flameFuelBar.activeSelf == true)
+			flameFuelBar.transform.localScale = new Vector3(ammoBarFull * (flameTAmmo / 100), flameThrowerObj.transform.localScale.y, flameThrowerObj.transform.localScale.z);
 
-        //update machine gun ammo bar
-        if (flameFuelBar.activeSelf == true)
-        {
-            flameFuelBar.transform.localscale = new vector3 (ammoBarFull * (flameTAmmo / 100), flameThrowerObj.localscale.y, flameThrowerObj.localscale.z);
-        }
+        // update machine gun ammo bar
+        if(mGunBulletsBar.activeSelf == true)
+			mGunBulletsBar.transform.localScale = new Vector3(ammoBarFull * (assaultMaxAmmo / 100), mGunBulletsBar.transform.localScale.y, mGunBulletsBar.transform.localScale.z);
+
+		// update player healh bar
+		if(playerHealth > 0.0f)
+			healthBarObj.transform.localScale = new Vector3(healthBarFull * (playerHealth / 100), healthBarObj.transform.localScale.y, healthBarObj.transform.localScale.z);
+
+		// update car health
+		if(carHealth > 0.0f)
+			carBarObj.transform.localScale = new Vector3(healthBarFull * (carHealth / 100), carBarObj.transform.localScale.y, carBarObj.transform.localScale.z);
 
         // active request state
 		if(activeRequest)
 		{
-			requestItemPrefab.setActive(true);
-			requestBuildObj.setActive(true);
+			requestItemPrefab.SetActive(true);
+			requestBuildObj.SetActive(true);
 			
 			switch (requestLocation)
 			{
@@ -145,60 +155,61 @@ public class S_HUD_Manager : MonoBehaviour
 				break;
 				
 				default:
-					debug.log("Something broke");
+					Debug.Log("Something broke");
 				break;
 			}
 		}
 		else
 		{
-			
+			requestItemPrefab.SetActive(true);
+			requestBuildObj.SetActive(true);
 		}
 	
 		// assign active weapon
 		switch(equipedWeapon)
 		{
 			case selectedWeapon.handGun:
-				redHighLight.transform.position = handgun.transform.position;
-				handGunBulletBar.setActive(true);
-				flameFuelBar.setActive(false);
-				mGunBulletsBar.setActive(false);
-				grenadeBar.setActive(false);
+				redHighLight.transform.position = handGunObj.transform.position;
+				handGunBulletBar.SetActive(true);
+				flameFuelBar.SetActive(false);
+				mGunBulletsBar.SetActive(false);
+				grenadeBar.SetActive(false);
 				
 			break;
 			
 			case selectedWeapon.machineGun:
 				redHighLight.transform.position = mGunObj.transform.position;
-				handGunBulletBar.setActive(false);
-				flameFuelBar.setActive(false);
-				mGunBulletsBar.setActive(true);
-				grenadeBar.setActive(false);
+				handGunBulletBar.SetActive(false);
+				flameFuelBar.SetActive(false);
+				mGunBulletsBar.SetActive(true);
+				grenadeBar.SetActive(false);
 			break;
 			
 			case selectedWeapon.flameThrower:
 				redHighLight.transform.position = flameThrowerObj.transform.position;
-				handGunBulletBar.setActive(false);
-				flameFuelBar.setActive(true);
-				mGunBulletsBar.setActive(false);
-				grenadeBar.setActive(false);
+				handGunBulletBar.SetActive(false);
+				flameFuelBar.SetActive(true);
+				mGunBulletsBar.SetActive(false);
+				grenadeBar.SetActive(false);
 			break;
 			
 			case selectedWeapon.grenadeLauncher:
 				redHighLight.transform.position = gLauncherObj.transform.position;
-				handGunBulletBar.setActive(false);
-				flameFuelBar.setActive(false);
-				mGunBulletsBar.setActive(false);
-				grenadeBar.setActive(true);
+				handGunBulletBar.SetActive(false);
+				flameFuelBar.SetActive(false);
+				mGunBulletsBar.SetActive(false);
+				grenadeBar.SetActive(true);
 
                 //update grenade count
                 for (int i = 0; i < gLauncherAmmo; i++)
                 {
-                    grenadeObjs[i].setActive(true);
+					grenadeObjs[i].SetActive(true);
                 }
 
 			break;
 			
 			default:
-				debug.log("something broke");
+				Debug.Log("something broke");
 			break;
 		}
 	}

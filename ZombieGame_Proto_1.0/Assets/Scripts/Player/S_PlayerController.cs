@@ -43,6 +43,9 @@ public class S_PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
+		// update HUD inst
+		S_HUD_Manager.inst.playerHealth = playerHP;
+
 		if (inCar == false)
 		{
 			ControlPlayer();

@@ -16,6 +16,9 @@ public class S_Car_Maintenance : MonoBehaviour
 	
 	public void Update()
 	{
+
+		// update HUD inst
+		S_HUD_Manager.inst.carHealth = carHealth;
 		
 		// is car fully repaired
 		if(carHealth >= 100)

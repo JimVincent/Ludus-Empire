@@ -15,7 +15,6 @@ public class GunShoot : MonoBehaviour {
 	private GameObject bulletFX;
 	private Ray ray;
 	private RaycastHit hit;
-	private S_InventoryManager inventory;
 	private float machineTimer;
 	private LineRenderer bulletPath;
 	
@@ -73,11 +72,18 @@ public class GunShoot : MonoBehaviour {
 
         blastTimer = 0.00f;
 
-		inventory = gameObject.transform.parent.GetComponent<S_InventoryManager>();
+		S_HUD_Manager.inst.assaultMaxAmmo = maxMachBullets;
+		S_HUD_Manager.inst.fameTMaxAmmo = maxFlameFuel;
+		S_HUD_Manager.inst.gLaunchMaxAmmo = maxGrenadeAmmo;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		// update the HUD variables
+		S_HUD_Manager.inst.assaultRAmmo = machgunbullets;
+		S_HUD_Manager.inst.flameTAmmo = flamefuel;
+		S_HUD_Manager.inst.gLauncherAmmo = grenadenumber;
 
 		if(Input.GetKeyDown ("1"))
 		{
@@ -87,7 +93,7 @@ public class GunShoot : MonoBehaviour {
 			flameFX.SetActive(false);
 		}
 
-		if(Input.GetKeyDown ("2") && inventory.gotAssault)
+		if(Input.GetKeyDown ("2") && S_HUD_Manager.inst.gotAssault)
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.MachineGun;
@@ -95,13 +101,13 @@ public class GunShoot : MonoBehaviour {
 			flameFX.SetActive(false);
 		}
 
-		if (Input.GetKeyDown ("3") && inventory.gotFlame) 
+		if (Input.GetKeyDown ("3") && S_HUD_Manager.inst.gotFlame) 
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Flamethrower;
 		} 
 
-		if(Input.GetKeyDown ("4") && inventory.gotlauncher)
+		if(Input.GetKeyDown ("4") && S_HUD_Manager.inst.gotlauncher)
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Grenade;

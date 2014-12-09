@@ -76,7 +76,7 @@
      <Compile Include="Assets\Scripts\Player\S_GameCamera.cs" />
      <Compile Include="Assets\Scripts\Player\S_PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\S_Player_Torch.cs" />
-     <Compile Include="Assets\Scripts\UI\S_InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\UI\S_HUD_Manager.cs" />
      <Compile Include="Assets\Scripts\UI\S_Menu_Buttons.cs" />
      <Compile Include="Assets\Scripts\Weapons\GunShoot.cs" />
      <Compile Include="Assets\Scripts\Weapons\S_FX_SelfDestuct.cs" />
