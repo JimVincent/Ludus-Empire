@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Maze Objects\S_Trash_Can.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SelfDestruct.cs" />
      <Compile Include="Assets\Scripts\Misc\S_SoundWave.cs" />
+     <Compile Include="Assets\Scripts\Pickups\S_Car_Pickups.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Misc_Pickups.cs" />
      <Compile Include="Assets\Scripts\Pickups\S_Weapon_Pickups.cs" />
      <Compile Include="Assets\Scripts\Player\S_CarControl.cs" />

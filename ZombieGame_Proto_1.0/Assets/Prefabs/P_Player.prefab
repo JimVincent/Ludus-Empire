@@ -956,6 +956,7 @@ MonoBehaviour:
   car: {fileID: 100002}
   playerHP: 100
   inCar: 0
+  zombieDamage: 5
   rotationSpeed: 500
   walkSpeed: 6
   runSpeed: 8

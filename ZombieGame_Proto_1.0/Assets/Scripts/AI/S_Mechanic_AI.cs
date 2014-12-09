@@ -89,6 +89,10 @@ public class S_Mechanic_AI : MonoBehaviour
 			else if(pDist > playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
 				outTimer += Time.deltaTime;
 
+			if(pDist < playerDetectionRange && S_Car_Maintenance.fullyRepaired){
+				GameObject.Find("P_Player_PlaceHolder").GetComponent<S_PlayerController>().inCar = true;
+			}
+
 			break;
 
 		case NPCState.end:

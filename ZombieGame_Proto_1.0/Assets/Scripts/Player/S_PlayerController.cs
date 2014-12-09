@@ -13,6 +13,7 @@ public class S_PlayerController : MonoBehaviour
 	//character vars
 	public float playerHP = 100;
 	public bool inCar = false;
+	public float zombieDamage;
 
 	//control
 	public float rotationSpeed = 500;
@@ -60,7 +61,8 @@ public class S_PlayerController : MonoBehaviour
 	//player death (place holder)
 		if (playerHP <= 0) 
 		{
-			//Destroy (gameObject);
+			PlayerPrefs.SetInt("victory",0);
+			Application.LoadLevel("End_Game");
 		}
 
 	//fire primary weapon (place holder)
@@ -114,6 +116,10 @@ public class S_PlayerController : MonoBehaviour
 	{
 		//destroy any objects hit by the car
 		temp.SendMessage ("AddDamage", 100f, SendMessageOptions.DontRequireReceiver);
+
+		if(temp.tag == "Attack"){
+			playerHP -= zombieDamage;
+		}
 	}
 
 
