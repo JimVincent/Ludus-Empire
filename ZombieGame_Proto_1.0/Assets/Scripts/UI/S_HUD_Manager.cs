@@ -200,12 +200,6 @@ public class S_HUD_Manager : MonoBehaviour
 				mGunBulletsBar.SetActive(false);
 				grenadeBar.SetActive(true);
 
-                //update grenade count
-                for (int i = 0; i < gLauncherAmmo; i++)
-                {
-					grenadeObjs[i].SetActive(true);
-                }
-
 			break;
 			
 			default:
@@ -214,7 +208,14 @@ public class S_HUD_Manager : MonoBehaviour
 		}
 	}
 
-
+	public void GrenadeCount()
+	{
+		//update grenade count
+		for (int i = 0; i < gLaunchMaxAmmo; i++)
+		{
+			grenadeObjs[i].SetActive(true);
+		}
+	}
 
 
 }

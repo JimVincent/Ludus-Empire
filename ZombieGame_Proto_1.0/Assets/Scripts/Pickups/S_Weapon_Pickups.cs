@@ -24,6 +24,7 @@ public class S_Weapon_Pickups : MonoBehaviour {
 			else{
 				S_HUD_Manager.inst.gotlauncher = true;
 				col.GetComponentInChildren<GunShoot>().grenadenumber += 2;
+				S_HUD_Manager.inst.GrenadeCount();
 			}
 
 			Destroy(gameObject);

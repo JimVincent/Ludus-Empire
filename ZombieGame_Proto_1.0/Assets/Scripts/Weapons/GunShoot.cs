@@ -121,6 +121,7 @@ public class GunShoot : MonoBehaviour {
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
 			flameAudio.Stop();
+			S_HUD_Manager.inst.GrenadeCount();
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
@@ -301,6 +302,7 @@ public class GunShoot : MonoBehaviour {
 				grenadeReleased = true;
                 grenadenumber --;
 				AudioSource.PlayClipAtPoint(grenadeShot,transform.position);
+				S_HUD_Manager.inst.GrenadeCount();
             }
 	}
 	/*	Do flame state

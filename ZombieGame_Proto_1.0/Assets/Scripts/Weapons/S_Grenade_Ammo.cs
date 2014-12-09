@@ -19,8 +19,11 @@ public class S_Grenade_Ammo : MonoBehaviour {
 		if(col.transform.tag == "Player" && gunscript.grenadenumber < gunscript.maxGrenadeAmmo)
 		{
 			gunscript.grenadenumber += ammoAmount;
-			if(gunscript.grenadenumber > gunscript.maxGrenadeAmmo){
+			S_HUD_Manager.inst.GrenadeCount();
+			if(gunscript.grenadenumber > gunscript.maxGrenadeAmmo)
+			{
 				gunscript.grenadenumber = gunscript.maxGrenadeAmmo;
+				S_HUD_Manager.inst.GrenadeCount();
 			}
 
 			Destroy(gameObject);
