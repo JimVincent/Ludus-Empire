@@ -1,0 +1,2126 @@
+fileFormatVersion: 2
+guid: b17d1046dc349c94dbcf9acc79bda158
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: LeftAnkleJoint
+    100002: LeftClavicleJoint
+    100004: LeftElbowJoint
+    100006: LeftFingersEndJoint
+    100008: LeftFingersJoint
+    100010: LeftForearmTwistJoint
+    100012: LeftHipJoint
+    100014: LeftKneeJoint
+    100016: LeftMidFootJoint
+    100018: LeftShoulderJoint
+    100020: LeftToesEndJoint
+    100022: LeftToesJoint
+    100024: LeftWristJoint
+    100026: LowerNeckJoint
+    100028: LowerSpineJoint
+    100030: MiddleSpineJoint
+    100032: RightAnkleJoint
+    100034: RightClavicleJoint
+    100036: RightElbowJoint
+    100038: RightFingersEndJoint
+    100040: RightFingersJoint
+    100042: RightForearmTwistJoint
+    100044: RightHipJoint
+    100046: RightKneeJoint
+    100048: RightMidFootJoint
+    100050: RightShoulderJoint
+    100052: RightToesEndJoint
+    100054: RightToesJoint
+    100056: RightWristJoint
+    100058: root
+    100060: Skin
+    100062: UpperNeckEndJoint
+    100064: UpperNeckJoint
+    100066: UpperSpineJoint
+    100068: //RootNode
+    400000: LeftAnkleJoint
+    400002: LeftClavicleJoint
+    400004: LeftElbowJoint
+    400006: LeftFingersEndJoint
+    400008: LeftFingersJoint
+    400010: LeftForearmTwistJoint
+    400012: LeftHipJoint
+    400014: LeftKneeJoint
+    400016: LeftMidFootJoint
+    400018: LeftShoulderJoint
+    400020: LeftToesEndJoint
+    400022: LeftToesJoint
+    400024: LeftWristJoint
+    400026: LowerNeckJoint
+    400028: LowerSpineJoint
+    400030: MiddleSpineJoint
+    400032: RightAnkleJoint
+    400034: RightClavicleJoint
+    400036: RightElbowJoint
+    400038: RightFingersEndJoint
+    400040: RightFingersJoint
+    400042: RightForearmTwistJoint
+    400044: RightHipJoint
+    400046: RightKneeJoint
+    400048: RightMidFootJoint
+    400050: RightShoulderJoint
+    400052: RightToesEndJoint
+    400054: RightToesJoint
+    400056: RightWristJoint
+    400058: root
+    400060: Skin
+    400062: UpperNeckEndJoint
+    400064: UpperNeckJoint
+    400066: UpperSpineJoint
+    400068: //RootNode
+    4300000: polySurface6
+    4300002: Object
+    7400000: Idle(PingPong)
+    7400002: Walk
+    7400004: Attack
+    7400006: Death_1
+    7400008: Death_2
+    7400010: Death_3
+    7400012: Death_4
+    7400014: Death_5
+    7400016: Death_6
+    7400018: Death_7
+    7400020: Death_8
+    7400022: Death_9
+    7400024: Death_10
+    7400026: Death_11
+    7400028: Death_12
+    7400030: Death_13
+    7400032: T-Pose
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle(PingPong)
+      takeName: C4D Animation Take
+      firstFrame: 12
+      lastFrame: 130
+      wrapMode: 4
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 1
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 1
+      - path: Skin
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Walk
+      takeName: C4D Animation Take
+      firstFrame: 177
+      lastFrame: 296
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 1
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 1
+      - path: Skin
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Attack
+      takeName: C4D Animation Take
+      firstFrame: 1226
+      lastFrame: 1251
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_1
+      takeName: C4D Animation Take
+      firstFrame: 322
+      lastFrame: 394
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_2
+      takeName: C4D Animation Take
+      firstFrame: 402
+      lastFrame: 431
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_3
+      takeName: C4D Animation Take
+      firstFrame: 448
+      lastFrame: 509
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_4
+      takeName: C4D Animation Take
+      firstFrame: 510
+      lastFrame: 593
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_5
+      takeName: C4D Animation Take
+      firstFrame: 594
+      lastFrame: 630
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_6
+      takeName: C4D Animation Take
+      firstFrame: 670
+      lastFrame: 692
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_7
+      takeName: C4D Animation Take
+      firstFrame: 716
+      lastFrame: 765
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_8
+      takeName: C4D Animation Take
+      firstFrame: 810
+      lastFrame: 843
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_9
+      takeName: C4D Animation Take
+      firstFrame: 890
+      lastFrame: 967
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_10
+      takeName: C4D Animation Take
+      firstFrame: 991
+      lastFrame: 1031
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_11
+      takeName: C4D Animation Take
+      firstFrame: 1078
+      lastFrame: 1135
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_12
+      takeName: C4D Animation Take
+      firstFrame: 1166
+      lastFrame: 1214
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Death_13
+      takeName: C4D Animation Take
+      firstFrame: 1151
+      lastFrame: 1213
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: T-Pose
+      takeName: C4D Animation Take
+      firstFrame: 5
+      lastFrame: 6
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/LeftHipJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint
+        weight: 1
+      - path: root/LeftHipJoint/LeftKneeJoint/LeftAnkleJoint/LeftMidFootJoint/LeftToesJoint/LeftToesEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LeftClavicleJoint/LeftShoulderJoint/LeftElbowJoint/LeftForearmTwistJoint/LeftWristJoint/LeftFingersJoint/LeftFingersEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/LowerNeckJoint/UpperNeckJoint/UpperNeckEndJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint
+        weight: 1
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint
+        weight: 0
+      - path: root/LowerSpineJoint/MiddleSpineJoint/UpperSpineJoint/RightClavicleJoint/RightShoulderJoint/RightElbowJoint/RightForearmTwistJoint/RightWristJoint/RightFingersJoint/RightFingersEndJoint
+        weight: 0
+      - path: root/RightHipJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint
+        weight: 1
+      - path: root/RightHipJoint/RightKneeJoint/RightAnkleJoint/RightMidFootJoint/RightToesJoint/RightToesEndJoint
+        weight: 0
+      - path: Skin
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 180
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human:
+    - boneName: root
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHipJoint
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHipJoint
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftKneeJoint
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightKneeJoint
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftAnkleJoint
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightAnkleJoint
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MiddleSpineJoint
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperSpineJoint
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerNeckJoint
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperNeckJoint
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftClavicleJoint
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightClavicleJoint
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftShoulderJoint
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightShoulderJoint
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftElbowJoint
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightElbowJoint
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftWristJoint
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightWristJoint
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftToesJoint
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToesJoint
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Zambie(Clone)
+      position: {x: -0, y: 0, z: .0213620141}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: Skin
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: root
+      position: {x: -0, y: .950460017, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LowerSpineJoint
+      position: {x: -0, y: .0845399424, z: 0}
+      rotation: {x: -.47905758, y: .520099819, z: -.47905758, w: .520099819}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: MiddleSpineJoint
+      position: {x: -.110000014, y: -8.881784e-18, z: 4.9244775e-18}
+      rotation: {x: -5.54862035e-17, y: 1.09308285e-16, z: -.0299782604, w: .999550581}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperSpineJoint
+      position: {x: -.154999971, y: -1.3322676e-17, z: -2.69095965e-17}
+      rotation: {x: 0, y: 4.17686057e-33, z: -1.73472348e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LowerNeckJoint
+      position: {x: -.25999999, y: .0459499955, z: -3.95121249e-17}
+      rotation: {x: -2.40796627e-17, y: 9.07530642e-33, z: .21689032, w: .976195991}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperNeckJoint
+      position: {x: -.0900000334, y: 1.42108544e-16, z: 2.03751356e-18}
+      rotation: {x: 3.87959288e-17, y: -8.06324577e-18, z: -.145254523, w: .989394307}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: UpperNeckEndJoint
+      position: {x: -.199999988, y: -3.5527136e-17, z: 7.91197346e-18}
+      rotation: {x: 1.23259516e-32, y: -3.08148791e-33, z: -1.38777878e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightClavicleJoint
+      position: {x: -.239999995, y: .0520000011, z: .0320000015}
+      rotation: {x: .5, y: -.5, z: .5, w: .5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightShoulderJoint
+      position: {x: .157999992, y: -.0399999619, z: .0100000007}
+      rotation: {x: .00484694913, y: .0340278782, z: -.0232193042, w: .999139428}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightElbowJoint
+      position: {x: .317499995, y: 2.84217088e-16, z: .00200000033}
+      rotation: {x: -.0216580834, y: -.0618925989, z: .0242655203, w: .997552693}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightForearmTwistJoint
+      position: {x: .132499993, y: 5.68434176e-16, z: 0}
+      rotation: {x: 1.73472348e-18, y: 5.55111512e-17, z: 4.33680869e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightWristJoint
+      position: {x: .13499999, y: -5.68434176e-16, z: -7.1054272e-17}
+      rotation: {x: 1.73472348e-18, y: 5.55111512e-17, z: 4.33680869e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightFingersJoint
+      position: {x: .0800000355, y: -.00999999046, z: 3.5527136e-17}
+      rotation: {x: .5, y: .5, z: .5, w: -.5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightFingersEndJoint
+      position: {x: -1.06526414e-08, y: .0799999759, z: 0}
+      rotation: {x: -6.12323426e-17, y: 1, z: -1.33158053e-07, w: -1.73472265e-17}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftClavicleJoint
+      position: {x: -.239999995, y: .0520000011, z: -.0320000015}
+      rotation: {x: -.5, y: .5, z: .5, w: .5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftShoulderJoint
+      position: {x: .157999992, y: -.0399999619, z: -.0100000007}
+      rotation: {x: .000553210615, y: -.0341024585, z: -.0233925171, w: .999144375}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftElbowJoint
+      position: {x: .317499995, y: -2.84217088e-16, z: -.00200000033}
+      rotation: {x: .0184055399, y: .0627030581, z: .023863418, w: .99757719}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftForearmTwistJoint
+      position: {x: .132499993, y: 0, z: 3.5527136e-17}
+      rotation: {x: 5.20417043e-18, y: -2.77555756e-17, z: 1.44444746e-34, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftWristJoint
+      position: {x: .13499999, y: 0, z: 7.1054272e-17}
+      rotation: {x: 5.20417043e-18, y: -2.77555756e-17, z: 1.44444746e-34, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftFingersJoint
+      position: {x: .0800000355, y: -.00999999046, z: 7.1054272e-17}
+      rotation: {x: .5, y: .5, z: .5, w: -.5}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftFingersEndJoint
+      position: {x: -1.06526414e-08, y: .0799999759, z: 2.84217088e-16}
+      rotation: {x: -9.62964972e-35, y: 3.46944695e-18, z: 2.77555756e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightHipJoint
+      position: {x: .0899999961, y: .00453996658, z: 0}
+      rotation: {x: -.481251419, y: -.518070519, z: .532273829, w: .465493917}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightKneeJoint
+      position: {x: -.436999947, y: -7.1054272e-17, z: -.00499999523}
+      rotation: {x: -.512364149, y: -.483995259, z: .542424917, w: -.457172632}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightAnkleJoint
+      position: {x: -0, y: -.453149974, z: -.00410000002}
+      rotation: {x: -5.01279309e-19, y: .0715032518, z: 6.99263666e-18, w: .997440398}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightMidFootJoint
+      position: {x: -0, y: -.039850004, z: .0640999973}
+      rotation: {x: .707106829, y: 9.41569667e-08, z: -.707106829, w: 9.41569667e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightToesJoint
+      position: {x: -.0680000037, y: -1.86264759e-09, z: 9.05474806e-09}
+      rotation: {x: -2.60208521e-18, y: -1.38777878e-17, z: -6.9388939e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: RightToesEndJoint
+      position: {x: -.0599999838, y: 5.5656596e-10, z: 7.98948108e-09}
+      rotation: {x: 7.06466136e-15, y: 1.66533454e-16, z: -6.9388939e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftHipJoint
+      position: {x: -.0899999961, y: .00453996658, z: 0}
+      rotation: {x: -.534922183, y: -.46244809, z: .488532037, w: .511210799}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftKneeJoint
+      position: {x: -.436999947, y: -5.3290704e-17, z: .00499999523}
+      rotation: {x: .510213017, y: .485597104, z: .54557097, w: -.454126}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftAnkleJoint
+      position: {x: -0, y: -.453149974, z: .00410000002}
+      rotation: {x: -7.97302502e-10, y: -.10701213, z: 7.40779749e-09, w: .994257748}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftMidFootJoint
+      position: {x: -3.5527136e-17, y: -.039850004, z: -.0640999973}
+      rotation: {x: .707106829, y: -9.41569738e-08, z: .707106829, w: 9.41569738e-08}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftToesJoint
+      position: {x: -.0680000037, y: -1.86264271e-09, z: -9.05474806e-09}
+      rotation: {x: 8.67361738e-19, y: -6.01853108e-36, z: -6.9388939e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    - name: LeftToesEndJoint
+      position: {x: -.0599999987, y: 5.5656757e-10, z: -7.98948374e-09}
+      rotation: {x: 8.67361738e-19, y: -6.01853108e-36, z: -6.9388939e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+      transformModified: 1
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  additionalBone: 0
+  userData: 
