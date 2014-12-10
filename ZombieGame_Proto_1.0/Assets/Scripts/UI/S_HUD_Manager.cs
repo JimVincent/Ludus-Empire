@@ -49,6 +49,7 @@ public class S_HUD_Manager : MonoBehaviour
 	public GameObject outPostObj;
 	public GameObject houseObj;
 	public GameObject workShopObj;
+	public GameObject defaultObj;
 
 	// weapon ammo
 	public float assaultRAmmo = 0;
@@ -171,7 +172,7 @@ public class S_HUD_Manager : MonoBehaviour
 		}
 		else
 		{
-			requestBuildObj = hospitalObj;
+			requestBuildObj = defaultObj;
 			requestItemPrefab.SetActive(false);
 			requestBuildObj.SetActive(false);
 		}
