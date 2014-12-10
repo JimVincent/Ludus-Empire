@@ -78,6 +78,7 @@ public class S_Mechanic_AI : MonoBehaviour
 			{
 				inTimer += Time.deltaTime;
 				carUnderAttack = false;
+				itemScript.OnMechanicReturn();
 
 				// handle request state
 				CheckRequest ();
@@ -146,11 +147,6 @@ public class S_Mechanic_AI : MonoBehaviour
 	// switches request state
 	public void CheckRequest()
 	{
-		if(activeRequest)
-		{
-			itemScript.OnMechanicReturn();
-		}
-
 //		if(activeRequest)// && static bool == false)
 //		{
 //			activeRequest = false;
