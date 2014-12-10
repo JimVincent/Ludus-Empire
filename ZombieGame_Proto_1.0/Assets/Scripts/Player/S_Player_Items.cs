@@ -13,12 +13,14 @@ public class S_Player_Items : MonoBehaviour {
 		fixScript = GameObject.Find("GameLogic").GetComponent<S_Car_Maintenance>();
 	}
 
-	public void OnMechanicReturn(){
+	public void OnMechanicReturn()
+	{
 		fixScript.FixCar(carPartValue);
 		carPartValue = 0;
 
-		if(!S_Car_Maintenance.fixing && fixScript.fixValue > 0 && hasMisc){
-			S_Car_Maintenance.fixing = true;
+		if(S_Mechanic_AI.activeRequest && hasMisc)
+		{
+			S_Mechanic_AI.activeRequest = false;
 			hasMisc = false;
 		}
 	}

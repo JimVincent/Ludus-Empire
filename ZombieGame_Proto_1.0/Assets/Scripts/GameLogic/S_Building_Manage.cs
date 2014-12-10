@@ -44,14 +44,34 @@ public class S_Building_Manage : MonoBehaviour
 				{
 					tents[i].SpawnItem(C_Building.ItemType.item);
 				}
-				
+
+
+				// should spawn request
+				int random = Random.Range(1, 3);
+				if(S_DayNightCycle.dayCount > 1 && random == 1)
+				{
+					bool found = false;
+					while(!found)
+					{
+						int randBuild = Random.Range(0, buildings.Count);
+
+						if(buildings[randBuild].requestItems.Length > 1)
+						{
+							found = true;
+							buildings[randBuild].SpawnItem(C_Building.ItemType.requestItem);
+							S_Mechanic_AI.activeRequest = true;
+						}
+					}
+				}
+
+
 				// stock parts
 				int partsToSpawn = Random.Range(1, carPartsPerDay + 1);
-				bool found = false;
 
 				// find a valid building
 				for(int i = 0; i < partsToSpawn; i++)
 				{
+					bool found = false;
 					while(!found)
 					{
 						int randomBuilding = Random.Range(0, buildings.Count);

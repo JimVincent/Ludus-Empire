@@ -7,6 +7,7 @@ public class S_Mechanic_AI : MonoBehaviour
 	public enum NPCState {start, inGame, end};
 
 	public static bool carUnderAttack;
+	public static bool activeRequest;
 
 	public float playerDetectionRange;
 	public float inRangeTalkRate;
@@ -22,7 +23,8 @@ public class S_Mechanic_AI : MonoBehaviour
 	public AudioClip closingDialogue;
 
 	private AudioSource aSource;
-	private bool activeRequest;
+	private S_Player_Items itemScript;
+
 	private float inTimer = 0.0f;
 	private float outTimer = 0.0f;
 	private NPCState state = NPCState.start;
@@ -144,7 +146,8 @@ public class S_Mechanic_AI : MonoBehaviour
 	// switches request state
 	public void CheckRequest()
 	{
-		if(itemScript.carPartValue > 0){
+		if(activeRequest)
+		{
 			itemScript.OnMechanicReturn();
 		}
 

@@ -26,7 +26,7 @@ public class S_Car_Maintenance : MonoBehaviour
 		else
 		{
 			// is car being fixed
-			if(fixValue > 0)
+			if(fixValue > 0 && !S_Mechanic_AI.activeRequest)
 			{
 				fixing = true;
 				
