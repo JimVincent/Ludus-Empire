@@ -4,6 +4,7 @@ using System.Collections;
 public class S_WinLose : MonoBehaviour {
 
 	public TextMesh winText;
+	public AudioClip victoryLine;
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +15,7 @@ public class S_WinLose : MonoBehaviour {
 		}
 		else{
 			winText.text = "YOU WIN";
+			AudioSource.PlayClipAtPoint(victoryLine,transform.position);
 		}
 	}
 	

@@ -6,7 +6,7 @@ public class S_Flamethrower_Ammo : MonoBehaviour {
 	public GunShoot gunscript;
 	public float ammoAmount;
 	public bool testBool = false;
-	public AudioClip ammopickup;
+	public AudioClip ammopickup,ammoFull;
 	
 	// Use this for initialization
 	void Start () {
@@ -28,6 +28,10 @@ public class S_Flamethrower_Ammo : MonoBehaviour {
 			}
 
 			Destroy(gameObject);
+		}
+		else if(col.transform.tag == "Player" && gunscript.flamefuel >= gunscript.maxFlameFuel)
+		{
+			AudioSource.PlayClipAtPoint(ammoFull,transform.position);
 		}
 	}
 }

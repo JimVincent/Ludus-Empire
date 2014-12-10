@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Collider), typeof(Rigidbody), typeof(NavMeshAgent))]
 public class S_Runner_AI : MonoBehaviour 
@@ -20,6 +21,12 @@ public class S_Runner_AI : MonoBehaviour
 
 	// timers
 	private float attackTimer = 0.0f;
+
+	//Audio
+	public List<AudioClip> audioList = new List<AudioClip>();
+	public float timeToNoise;
+	public float noiseTimeDeviation;
+	private float noiseTimer;
 
 	// Use this for initialization
 	void Start () 
@@ -67,6 +74,13 @@ public class S_Runner_AI : MonoBehaviour
 			else
 				attackArm.enabled = false;
 		}
+
+		noiseTimer -= Time.deltaTime;
+		
+		if(noiseTimer <= 0){
+			PlayNoise();
+			noiseTimer = timeToNoise + Random.Range(0, noiseTimeDeviation);
+		}
 	}
 
 	void OnTriggerEnter(Collider otherObj)
@@ -92,5 +106,11 @@ public class S_Runner_AI : MonoBehaviour
 		// zombie leaving the car
 		if(otherObj.collider.tag == "Car")
 			S_Mechanic_AI.carUnderAttack = true;
+	}
+
+	void PlayNoise(){
+		int rand = Random.Range(0,audioList.Count);
+		
+		AudioSource.PlayClipAtPoint(audioList[rand],transform.position);
 	}
 }

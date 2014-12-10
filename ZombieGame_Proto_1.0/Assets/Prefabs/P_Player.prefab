@@ -30,6 +30,9 @@ GameObject:
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500002}
   - 114: {fileID: 11400002}
+  - 65: {fileID: 6500004}
+  - 114: {fileID: 11400012}
+  - 82: {fileID: 8200002}
   m_Layer: 0
   m_Name: P_Player_SUV
   m_TagString: Player
@@ -173,7 +176,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400006}
   m_Layer: 0
-  m_Name: P_Player_Person
+  m_Name: P_Player_PlaceHolder
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1012,8 +1015,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -64.8867188, y: 8.29651546, z: -56.3058701}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -64.8867188, y: 8.10279655, z: -56.3058701}
+  m_LocalScale: {x: .75, y: .75, z: .75}
   m_Children:
   - {fileID: 400002}
   - {fileID: 400018}
@@ -2036,6 +2039,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.78999996, y: 2.45000005, z: 5.30000019}
   m_Center: {x: 0, y: 1.24000001, z: -.230000004}
+--- !u!65 &6500004
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.78999996, y: 2.45000005, z: 5.30000019}
+  m_Center: {x: 0, y: 1.24000001, z: -.230000004}
 --- !u!82 &8200000
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2046,6 +2061,64 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 0f017dd8ce0b07d408a7c3773ea28f25, type: 3}
   m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8200002
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 19bbfd24b421e4a41baf076464b96e55, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -2299,6 +2372,19 @@ MonoBehaviour:
   acceleration: 60
   primaryWeaponBullet: {fileID: 0}
   worldCar: {fileID: 0}
+  carIgnition: {fileID: 8300000, guid: c98f5691b812d8c45b1cfbadf59dc836, type: 3}
+--- !u!114 &11400012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a9dd7953e7d2d4b923397ada380e3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieImpact: {fileID: 8300000, guid: 67073c8339687d844a5ab9e816a64601, type: 3}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

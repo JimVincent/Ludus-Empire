@@ -5,19 +5,11 @@ public class S_Car_Pickups : MonoBehaviour {
 
 
 	public float repairValue;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public AudioClip pickupSFX;
 
 	void OnTriggerEnter(Collider col){
 		if(col.tag == "Player"){
+			AudioSource.PlayClipAtPoint(pickupSFX,transform.position);
 			col.GetComponent<S_Player_Items>().carPartValue += repairValue;
 			Destroy(gameObject);
 		}

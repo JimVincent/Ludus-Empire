@@ -11,6 +11,12 @@ public class S_Car_Maintenance : MonoBehaviour
 	// inspector variables
 	public float fixRate = 2.0f;
 	public float fixValue = 0;
+
+	private AudioSource aSource;
+
+	public void Start(){
+		aSource = gameObject.GetComponent<AudioSource>();
+	}
 	
 	public void Update()
 	{
@@ -22,6 +28,7 @@ public class S_Car_Maintenance : MonoBehaviour
 		if(carHealth >= 100)
 		{
 			fullyRepaired = true;
+			aSource.Stop();
 		}
 		else
 		{
@@ -29,10 +36,15 @@ public class S_Car_Maintenance : MonoBehaviour
 			if(fixValue > 0 && !S_Mechanic_AI.activeRequest)
 			{
 				fixing = true;
+				aSource.Play();
 				
 				// add value to carHealth over time
 				carHealth += fixRate * Time.deltaTime;
 				fixValue -= fixRate * Time.deltaTime;
+			}
+			else
+			{
+				aSource.Stop();
 			}
 
 			if(fixValue < 0)

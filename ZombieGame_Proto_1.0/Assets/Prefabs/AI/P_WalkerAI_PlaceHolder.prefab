@@ -722,7 +722,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.4382782, y: 7.70651531, z: -6.6286521}
+  m_LocalPosition: {x: -62.3105965, y: 9.02235794, z: -52.5394897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
@@ -1418,6 +1418,13 @@ MonoBehaviour:
   idleBuffer: 20
   searchTime: 10
   walkerState: 0
+  audioList:
+  - {fileID: 8300000, guid: c69f930a73b38db438f6fcf8f7795173, type: 3}
+  - {fileID: 8300000, guid: e3417576f60c91947b107e4480ee7806, type: 3}
+  - {fileID: 8300000, guid: ac3c3dff8d0c76c488dc36a13d661903, type: 3}
+  - {fileID: 8300000, guid: 39ea4a16146c28b4db14fc855ba53455, type: 3}
+  timeToNoise: 15
+  noiseTimeDeviation: 10
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winText: {fileID: 0}
+  victoryLine: {fileID: 8300000, guid: 0dc671bfcfb880e4b9110ec7ea09a32f, type: 3}
 --- !u!102 &1527695562
 TextMesh:
   serializedVersion: 3

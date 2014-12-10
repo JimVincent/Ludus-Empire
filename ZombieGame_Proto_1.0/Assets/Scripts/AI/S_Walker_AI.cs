@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider), typeof(NavMeshAgent))]
 public class S_Walker_AI : MonoBehaviour 
@@ -40,6 +41,11 @@ public class S_Walker_AI : MonoBehaviour
 
 	private S_SoundWave soundWave;
 
+	//Audio
+	public List<AudioClip> audioList = new List<AudioClip>();
+	public float timeToNoise;
+	public float noiseTimeDeviation;
+	private float noiseTimer;
 
 	// Use this for initialization
 	void Start () 
@@ -186,6 +192,13 @@ public class S_Walker_AI : MonoBehaviour
 
 			break;
 		}
+
+		noiseTimer -= Time.deltaTime;
+
+		if(noiseTimer <= 0){
+			PlayNoise();
+			noiseTimer = timeToNoise + Random.Range(0, noiseTimeDeviation);
+		}
 	}
 
 	// handle collosions
@@ -244,5 +257,11 @@ public class S_Walker_AI : MonoBehaviour
 	public void LookAtTarget()
 	{
 		transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(targetPos - transform.position), rotateSpeed * Time.deltaTime);
+	}
+
+	void PlayNoise(){
+		int rand = Random.Range(0,audioList.Count);
+
+		AudioSource.PlayClipAtPoint(audioList[rand],transform.position);
 	}
 }

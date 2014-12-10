@@ -31,6 +31,7 @@ public class S_PlayerController : MonoBehaviour
 	
 	public GameObject primaryWeaponBullet;
 	public GameObject worldCar;
+	public AudioClip carIgnition;
 
 	void Awake()
 	{
@@ -58,6 +59,7 @@ public class S_PlayerController : MonoBehaviour
 			player.SetActive (false);
 			car.SetActive (true);
 			DestroyObject (worldCar);
+			AudioSource.PlayClipAtPoint(carIgnition,transform.position);
 		}
 	
 	//player death (place holder)

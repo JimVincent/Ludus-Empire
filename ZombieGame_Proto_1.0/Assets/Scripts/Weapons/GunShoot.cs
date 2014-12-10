@@ -24,7 +24,7 @@ public class GunShoot : MonoBehaviour {
 
 	//Rifle
 	public int machgunbullets = 0;
-	public int maxMachBullets;
+	public int maxMachBullets = 70;
 	public int machineDamage = 15;
 	public float machineFirerate = 0.5f;
 
@@ -98,6 +98,8 @@ public class GunShoot : MonoBehaviour {
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
 			flameAudio.Stop();
+			S_HUD_Manager.inst.equipedWeapon = selectedWeapon.handGun;
+			S_HUD_Manager.inst.HideGrenadeCount();
 		}
 
 		if(Input.GetKeyDown ("2") && S_HUD_Manager.inst.gotAssault)
@@ -107,12 +109,16 @@ public class GunShoot : MonoBehaviour {
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
 			flameAudio.Stop();
+			S_HUD_Manager.inst.equipedWeapon = selectedWeapon.machineGun;
+			S_HUD_Manager.inst.HideGrenadeCount();
 		}
 
 		if (Input.GetKeyDown ("3") && S_HUD_Manager.inst.gotFlame) 
 		{
 			//AudioSource.PlayClipAtPoint (changeWeapon, transform.position);
 			curState = GunState.Flamethrower;
+			S_HUD_Manager.inst.equipedWeapon = selectedWeapon.flameThrower;
+			S_HUD_Manager.inst.HideGrenadeCount();
 		} 
 
 		if(Input.GetKeyDown ("4") && S_HUD_Manager.inst.gotlauncher)
@@ -123,6 +129,7 @@ public class GunShoot : MonoBehaviour {
 			flameFX.SetActive(false);
 			flameAudio.Stop();
 			S_HUD_Manager.inst.GrenadeCount();
+			S_HUD_Manager.inst.equipedWeapon = selectedWeapon.grenadeLauncher;
 		}
 
 		if (Input.GetKeyDown (KeyCode.K))
@@ -303,9 +310,10 @@ public class GunShoot : MonoBehaviour {
 				shotGrenade = (GameObject)Instantiate (grenade,gameObject.transform.position+transform.forward*2, gameObject.transform.rotation);
 				shotGrenade.rigidbody.AddForce (shotGrenade.transform.forward*10, ForceMode.VelocityChange);
 				grenadeReleased = true;
+				S_HUD_Manager.inst.RemoveGrenade();
                 grenadenumber --;
 				AudioSource.PlayClipAtPoint(grenadeShot,transform.position);
-				S_HUD_Manager.inst.GrenadeCount();
+				//S_HUD_Manager.inst.GrenadeCount();
             }
 		if(Input.GetMouseButtonDown(0) && grenadenumber <= 0)
 		{

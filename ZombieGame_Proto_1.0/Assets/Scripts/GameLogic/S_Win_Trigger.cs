@@ -14,7 +14,7 @@ public class S_Win_Trigger : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider col){
-		if (col.transform.tag == "Player" && GameObject.Find("VEHICLE_SUV").activeSelf){
+		if (col.tag == "Player" && S_PlayerController.inst.inCar){
 			//trigger win state
 			print ("YOU WIN!");
 			PlayerPrefs.SetInt("victory",1);

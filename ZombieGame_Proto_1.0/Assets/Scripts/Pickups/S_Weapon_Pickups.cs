@@ -11,6 +11,7 @@ public class S_Weapon_Pickups : MonoBehaviour {
 
 	public pickupType weaponType;
 	public GunShoot gunScript;
+	public AudioClip pickupSFX;
 
 	void Start(){
 		gunScript = GameObject.Find("P_Player_Gun_Placeholder").GetComponentInChildren<GunShoot>();
@@ -20,6 +21,7 @@ public class S_Weapon_Pickups : MonoBehaviour {
 		if (col.tag == "Player"){
 			if (weaponType == pickupType.rifle){
 				S_HUD_Manager.inst.gotAssault = true;
+				S_HUD_Manager.inst.mGunObj.SetActive(true);
 
 				if(gunScript.machgunbullets < gunScript.maxMachBullets){
 					gunScript.machgunbullets += 30;
@@ -31,6 +33,7 @@ public class S_Weapon_Pickups : MonoBehaviour {
 			}
 			else if (weaponType == pickupType.flamethrower){
 				S_HUD_Manager.inst.gotFlame = true;
+				S_HUD_Manager.inst.flameThrowerObj.SetActive(true);
 
 				if(gunScript.flamefuel < gunScript.maxFlameFuel){
 					col.GetComponentInChildren<GunShoot>().flamefuel += 3;
@@ -42,6 +45,7 @@ public class S_Weapon_Pickups : MonoBehaviour {
 			}
 			else{
 				S_HUD_Manager.inst.gotlauncher = true;
+				S_HUD_Manager.inst.gLauncherObj.SetActive(true);
 
 				if(gunScript.grenadenumber < gunScript.maxGrenadeAmmo){
 					col.GetComponentInChildren<GunShoot>().grenadenumber += 2;
@@ -51,9 +55,11 @@ public class S_Weapon_Pickups : MonoBehaviour {
 					}
 				}
 
-				S_HUD_Manager.inst.GrenadeCount();
+				if(S_HUD_Manager.inst.equipedWeapon == selectedWeapon.grenadeLauncher){
+					S_HUD_Manager.inst.GrenadeCount();
+				}
 			}
-
+			AudioSource.PlayClipAtPoint(pickupSFX,transform.position);
 			Destroy(gameObject);
 		}
 	}

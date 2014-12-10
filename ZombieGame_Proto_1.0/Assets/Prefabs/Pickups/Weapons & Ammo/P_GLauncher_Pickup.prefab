@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: .266649276, y: .654903173, z: .266649306, w: .654903293}
-  m_LocalPosition: {x: -6.49963999, y: 7.26724339, z: 23.8023949}
+  m_LocalPosition: {x: -63.5444641, y: 7.15429688, z: -50.9610252}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 2
   gunScript: {fileID: 0}
+  pickupSFX: {fileID: 8300000, guid: ca281afbb83b6544c82b5e8f00fa37f0, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

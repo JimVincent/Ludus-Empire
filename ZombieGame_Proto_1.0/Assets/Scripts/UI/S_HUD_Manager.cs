@@ -37,6 +37,9 @@ public class S_HUD_Manager : MonoBehaviour
 	public GameObject grenadeBar;
 	public GameObject[] grenadeObjs;
 
+	public GameObject mGunOuterBar;
+	public GameObject flameOuterBar;
+
 	// request locations objects
 	public GameObject hospitalObj;
 	public GameObject shopObj;
@@ -48,10 +51,10 @@ public class S_HUD_Manager : MonoBehaviour
 	public GameObject workShopObj;
 
 	// weapon ammo
-	public int assaultRAmmo = 0;
+	public float assaultRAmmo = 0;
 	public float flameTAmmo = 0.0f;
 	public int gLauncherAmmo = 0;
-	public int assaultMaxAmmo;
+	public float assaultMaxAmmo;
 	public float fameTMaxAmmo;
 	public int gLaunchMaxAmmo;
 
@@ -93,6 +96,9 @@ public class S_HUD_Manager : MonoBehaviour
 		flameFuelBar.SetActive(false);
 		mGunBulletsBar.SetActive(false);
 		grenadeBar.SetActive(false);
+
+		mGunOuterBar.SetActive(false);
+		flameOuterBar.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -100,11 +106,15 @@ public class S_HUD_Manager : MonoBehaviour
 	{
         // update fuel ammo bar
         if(flameFuelBar.activeSelf == true)
-			flameFuelBar.transform.localScale = new Vector3(ammoBarFull * (flameTAmmo / 100), flameThrowerObj.transform.localScale.y, flameThrowerObj.transform.localScale.z);
+			flameFuelBar.transform.localScale = new Vector3(ammoBarFull * (flameTAmmo / fameTMaxAmmo), flameThrowerObj.transform.localScale.y, flameThrowerObj.transform.localScale.z);
 
         // update machine gun ammo bar
-        if(mGunBulletsBar.activeSelf == true)
-			mGunBulletsBar.transform.localScale = new Vector3(ammoBarFull * (assaultMaxAmmo / 100), mGunBulletsBar.transform.localScale.y, mGunBulletsBar.transform.localScale.z);
+        if(mGunBulletsBar.activeSelf == true){
+			mGunBulletsBar.transform.localScale = new Vector3(ammoBarFull * (assaultRAmmo / assaultMaxAmmo), mGunBulletsBar.transform.localScale.y, mGunBulletsBar.transform.localScale.z);
+//			print ("Current: " + assaultRAmmo);
+//			print ("Max: " + assaultMaxAmmo);
+//			print ("Division: " + assaultRAmmo/assaultMaxAmmo);
+		}
 
 		// update player healh bar
 		if(playerHealth > 0.0f)
@@ -161,8 +171,9 @@ public class S_HUD_Manager : MonoBehaviour
 		}
 		else
 		{
-			requestItemPrefab.SetActive(true);
-			requestBuildObj.SetActive(true);
+			requestBuildObj = hospitalObj;
+			requestItemPrefab.SetActive(false);
+			requestBuildObj.SetActive(false);
 		}
 	
 		// assign active weapon
@@ -172,7 +183,9 @@ public class S_HUD_Manager : MonoBehaviour
 				redHighLight.transform.position = handGunObj.transform.position;
 				handGunBulletBar.SetActive(true);
 				flameFuelBar.SetActive(false);
+				flameOuterBar.SetActive(false);
 				mGunBulletsBar.SetActive(false);
+				mGunOuterBar.SetActive(false);
 				grenadeBar.SetActive(false);
 				
 			break;
@@ -181,6 +194,8 @@ public class S_HUD_Manager : MonoBehaviour
 				redHighLight.transform.position = mGunObj.transform.position;
 				handGunBulletBar.SetActive(false);
 				flameFuelBar.SetActive(false);
+				flameOuterBar.SetActive(false);
+				mGunOuterBar.SetActive(true);
 				mGunBulletsBar.SetActive(true);
 				grenadeBar.SetActive(false);
 			break;
@@ -188,8 +203,10 @@ public class S_HUD_Manager : MonoBehaviour
 			case selectedWeapon.flameThrower:
 				redHighLight.transform.position = flameThrowerObj.transform.position;
 				handGunBulletBar.SetActive(false);
+				flameOuterBar.SetActive(true);
 				flameFuelBar.SetActive(true);
 				mGunBulletsBar.SetActive(false);
+				mGunOuterBar.SetActive(false);
 				grenadeBar.SetActive(false);
 			break;
 			
@@ -197,7 +214,9 @@ public class S_HUD_Manager : MonoBehaviour
 				redHighLight.transform.position = gLauncherObj.transform.position;
 				handGunBulletBar.SetActive(false);
 				flameFuelBar.SetActive(false);
+				flameOuterBar.SetActive(false);
 				mGunBulletsBar.SetActive(false);
+				mGunOuterBar.SetActive(false);
 				grenadeBar.SetActive(true);
 
 			break;
@@ -211,9 +230,23 @@ public class S_HUD_Manager : MonoBehaviour
 	public void GrenadeCount()
 	{
 		//update grenade count
+		for (int i = 0; i < gLauncherAmmo; i++)
+		{
+			grenadeObjs[i].SetActive(true);
+		}
+	}
+
+	public void RemoveGrenade()
+	{
+		grenadeObjs[gLauncherAmmo - 1].SetActive(false);
+	}
+
+	public void HideGrenadeCount()
+	{
+		//hide grenade count
 		for (int i = 0; i < gLaunchMaxAmmo; i++)
 		{
-			//grenadeObjs[i].SetActive(true);
+			grenadeObjs[i].SetActive(false);
 		}
 	}
 

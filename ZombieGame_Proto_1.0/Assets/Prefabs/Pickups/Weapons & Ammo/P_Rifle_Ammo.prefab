@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 8.14603425e-08, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.1328278, y: 6.90581036, z: -30.2818985}
+  m_LocalPosition: {x: -60.9081192, y: 6.90581036, z: -48.6774788}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   gunscript: {fileID: 0}
   ammoAmount: 30
   ammoPickup: {fileID: 8300000, guid: ca281afbb83b6544c82b5e8f00fa37f0, type: 3}
+  ammoFull: {fileID: 8300000, guid: c6093eaa19bf4c74a9f1312560d27176, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

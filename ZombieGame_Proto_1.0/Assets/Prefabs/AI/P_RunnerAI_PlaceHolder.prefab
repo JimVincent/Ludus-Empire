@@ -692,7 +692,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.1039772, y: 7.70651531, z: -3.60408926}
+  m_LocalPosition: {x: -66.8275528, y: 9.05173779, z: -52.1316757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -1360,9 +1360,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  attackRange: 1
+  attackRange: 3
   attackRate: 2
   attackArm: {fileID: 6500000}
+  audioList:
+  - {fileID: 8300000, guid: a9d3bed97e4f17c4b9544d24321e92ad, type: 3}
+  - {fileID: 8300000, guid: d6e40ab1bc757604d86b76b459e5e336, type: 3}
+  - {fileID: 8300000, guid: 7544b1d1bf50e174bb945b417e6929af, type: 3}
+  - {fileID: 8300000, guid: 66edc00fe82fc7342807503f5d304363, type: 3}
+  timeToNoise: 20
+  noiseTimeDeviation: 15
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
