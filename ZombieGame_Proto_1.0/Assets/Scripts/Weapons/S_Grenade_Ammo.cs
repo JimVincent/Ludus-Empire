@@ -9,7 +9,7 @@ public class S_Grenade_Ammo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gunscript = GameObject.Find ("P_Player_PlaceHolder").GetComponentInChildren<GunShoot> ();
+		gunscript = GameObject.Find ("P_Player_Gun_Placeholder").GetComponent<GunShoot> ();
 	}
 	
 	// Update is called once per frame

@@ -30,6 +30,7 @@ public class S_PlayerController : MonoBehaviour
 	private float steering;
 	
 	public GameObject primaryWeaponBullet;
+	public GameObject worldCar;
 
 	void Awake()
 	{
@@ -56,6 +57,7 @@ public class S_PlayerController : MonoBehaviour
 		{
 			player.SetActive (false);
 			car.SetActive (true);
+			DestroyObject (worldCar);
 		}
 	
 	//player death (place holder)
@@ -117,7 +119,7 @@ public class S_PlayerController : MonoBehaviour
 		//destroy any objects hit by the car
 		temp.SendMessage ("AddDamage", 100f, SendMessageOptions.DontRequireReceiver);
 
-		if(temp.tag == "Attack"){
+		if(temp.tag == "Attack" && inCar == false){
 			playerHP -= zombieDamage;
 		}
 	}
