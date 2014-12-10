@@ -6,6 +6,8 @@ public class S_Mechanic_AI : MonoBehaviour
 {
 	public enum NPCState {start, inGame, end};
 
+	public static bool carUnderAttack;
+
 	public float playerDetectionRange;
 	public float inRangeTalkRate;
 	public float absentTalkRate;		// says something when back in range
@@ -18,8 +20,6 @@ public class S_Mechanic_AI : MonoBehaviour
 
 	public AudioClip openingDialogue;
 	public AudioClip closingDialogue;
-
-	public S_Player_Items itemScript;
 
 	private AudioSource aSource;
 	private bool activeRequest;
@@ -34,9 +34,6 @@ public class S_Mechanic_AI : MonoBehaviour
 		// set up audio source
 		aSource = GetComponent<AudioSource>();
 		aSource.playOnAwake = false;
-
-		//Grab item script
-		itemScript = GameObject.Find("P_Player_PlaceHolder").GetComponent<S_Player_Items>();
 	}
 	
 	// Update is called once per frame
@@ -75,6 +72,7 @@ public class S_Mechanic_AI : MonoBehaviour
 			if(pDist < playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
 			{
 				inTimer += Time.deltaTime;
+				carUnderAttack = false;
 
 				// handle request state
 				CheckRequest ();
@@ -86,7 +84,23 @@ public class S_Mechanic_AI : MonoBehaviour
 					aSource.Play();
 				}
 			}
-			else if(pDist > playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
+			else if(pDist < playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.night)
+			{
+				inTimer += Time.deltaTime;
+				
+				// play audio
+				if(inTimer > inRangeTalkRate)
+				{
+					if(carUnderAttack)
+					{
+						aSource.clip = NewAudio(gettingAttacked);
+						aSource.Play();
+					}
+				}
+			}
+
+			// player out of range
+			if(pDist > playerDetectionRange && S_DayNightCycle.dayState == S_DayNightCycle.DayState.day)
 				outTimer += Time.deltaTime;
 
 			if(pDist < playerDetectionRange && S_Car_Maintenance.fullyRepaired){
@@ -127,11 +141,8 @@ public class S_Mechanic_AI : MonoBehaviour
 	// switches request state
 	public void CheckRequest()
 	{
-		if(itemScript.carPartValue > 0){
-			itemScript.OnMechanicReturn();
-		}
 
-		// check static bool request 
+
 
 //		if(activeRequest)// && static bool == false)
 //		{
@@ -153,8 +164,8 @@ public class S_Mechanic_AI : MonoBehaviour
 		// check state
 		if(activeRequest)
 			aSource.clip = NewAudio(getRequest);
-		//else if(S_CarManager.isGettingFixed == false)
-		//	aSource.clip = NewAudio(getParts);
+		else if(!S_Car_Maintenance.fixing)
+			aSource.clip = NewAudio(getParts);
 		else
 			aSource.clip = NewAudio(general);
 	}

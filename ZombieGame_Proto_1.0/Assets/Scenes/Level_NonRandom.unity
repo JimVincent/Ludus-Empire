@@ -3152,21 +3152,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDetectionRange: 14
-  inRangeTalkRate: 30
+  inRangeTalkRate: 15
   absentTalkRate: 60
   general:
-  - {fileID: 8300000, guid: ba88bcc96ab8c6247909586977d48413, type: 3}
+  - {fileID: 8300000, guid: 6d94025d9217aa449b59b3ab07b98c31, type: 3}
+  - {fileID: 8300000, guid: 1c4456abec7cb2849b6f357cfba42060, type: 3}
+  - {fileID: 8300000, guid: 97945498643a0c14b89e32c72695a844, type: 3}
+  - {fileID: 8300000, guid: d3d93dd4f37e0cc449a9a4a386d42ccb, type: 3}
+  - {fileID: 8300000, guid: d499ef60c63b06446a49f34a8f4feea9, type: 3}
   getParts:
-  - {fileID: 8300000, guid: 613c01ef8c8b69f49bd8fb7336861153, type: 3}
+  - {fileID: 8300000, guid: 23859ffdf6938cb4b988974a3ead45f5, type: 3}
+  - {fileID: 8300000, guid: 3a172fb382f83864183e86b98d85fc42, type: 3}
+  - {fileID: 8300000, guid: eb779bd8df2645b4bae7c5a0ae71e577, type: 3}
+  - {fileID: 8300000, guid: f0df23268cbcc8d48a48eb8c07a08979, type: 3}
   getRequest:
-  - {fileID: 8300000, guid: 2d019b492c333a043b43636661127c97, type: 3}
+  - {fileID: 8300000, guid: 1ef251f1feb4c874698b88a59e58b6c5, type: 3}
+  - {fileID: 8300000, guid: 6458818f75d3e3546bc6f6fd76dd2b37, type: 3}
+  - {fileID: 8300000, guid: 08445eb2c361c0642ba70daa2fe99d1e, type: 3}
   gettingAttacked:
-  - {fileID: 8300000, guid: 0f46731baf24d7b419e1dfdbe7c041af, type: 3}
+  - {fileID: 8300000, guid: 8b4f188b672a4c343b5066367c40e4a7, type: 3}
+  - {fileID: 8300000, guid: 9157760218a43b8409b681212cb17d2b, type: 3}
+  - {fileID: 8300000, guid: 63d558f5eeb93ff43b9235013115a559, type: 3}
   thanks:
-  - {fileID: 8300000, guid: 2243c61fef4871544b6dd4be1f261ba8, type: 3}
-  openingDialogue: {fileID: 8300000, guid: 2a95a83c902e2524fbbba4590e029a4a, type: 3}
-  closingDialogue: {fileID: 8300000, guid: 557178abe5589d34dbf1729bf7de66db, type: 3}
-  itemScript: {fileID: 0}
+  - {fileID: 8300000, guid: b22241e5ef3134b4a9e206fcf965e63b, type: 3}
+  - {fileID: 8300000, guid: 8185417c55a0cfc4eb1f0c2883ca33a1, type: 3}
+  - {fileID: 8300000, guid: 6bf531ac983644d4986861b1eef7fad1, type: 3}
+  openingDialogue: {fileID: 8300000, guid: 3e06bb1c1c428c84084fbac8b155f556, type: 3}
+  closingDialogue: {fileID: 8300000, guid: 0dc671bfcfb880e4b9110ec7ea09a32f, type: 3}
 --- !u!23 &875083044
 Renderer:
   m_ObjectHideFlags: 0
@@ -9334,11 +9346,11 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .150000006
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 37
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

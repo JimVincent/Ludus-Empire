@@ -34,7 +34,8 @@ public class S_Car_Maintenance : MonoBehaviour
 				carHealth += fixRate * Time.deltaTime;
 				fixValue -= fixRate * Time.deltaTime;
 			}
-			else
+
+			if(fixValue < 0)
 			{
 				fixValue = 0;
 				fixing = false;

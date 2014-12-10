@@ -61,7 +61,6 @@ public class S_Runner_AI : MonoBehaviour
 			attackTimer += Time.deltaTime;
 			if(attackTimer > attackRate)
 			{
-				print ("Hitting");
 				attackTimer = 0.0f;
 				attackArm.enabled = true;
 			}
@@ -82,5 +81,16 @@ public class S_Runner_AI : MonoBehaviour
 		// target player
 		if(otherObj.collider.tag == "Player")
 			targetPos = playerPos;
+
+		// zombie attacking the car
+		if(otherObj.collider.tag == "Car")
+			S_Mechanic_AI.carUnderAttack = true;
+	}
+
+	void OnCollisionExit(Collision otherObj)
+	{
+		// zombie leaving the car
+		if(otherObj.collider.tag == "Car")
+			S_Mechanic_AI.carUnderAttack = true;
 	}
 }
