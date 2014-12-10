@@ -6,6 +6,7 @@ public class S_Flamethrower_Ammo : MonoBehaviour {
 	public GunShoot gunscript;
 	public float ammoAmount;
 	public bool testBool = false;
+	public AudioClip ammopickup;
 	
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,7 @@ public class S_Flamethrower_Ammo : MonoBehaviour {
 	{
 		if(col.transform.tag == "Player" && gunscript.flamefuel < gunscript.maxFlameFuel && !testBool)
 		{
+			AudioSource.PlayClipAtPoint(ammopickup, transform.position);
 			gunscript.flamefuel += ammoAmount;
 			if (gunscript.flamefuel > gunscript.maxFlameFuel)
 			{

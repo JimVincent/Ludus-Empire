@@ -52,6 +52,7 @@ public class GunShoot : MonoBehaviour {
 	//Audio
 	public AudioClip pistolShot, rifleShot, grenadeShot, grenadeExplosion;
 	public AudioSource flameAudio;
+	public AudioClip emptyWeapon;
 
 	//Not Needed
 		//public bool outofammo;
@@ -254,9 +255,11 @@ public class GunShoot : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(rifleShot,transform.position);
 			}
 		}
-		if (Input.GetMouseButton (0) && machgunbullets <= 0) 
+		if (Input.GetMouseButtonDown (0) && machgunbullets <= 0) 
 		{
 			//play sound
+			audio.PlayOneShot (emptyWeapon);
+			//AudioSource.PlayClipAtPoint(emptyWeapon, transform.position);
 		}
 	}
 	
@@ -304,6 +307,11 @@ public class GunShoot : MonoBehaviour {
 				AudioSource.PlayClipAtPoint(grenadeShot,transform.position);
 				S_HUD_Manager.inst.GrenadeCount();
             }
+		if(Input.GetMouseButtonDown(0) && grenadenumber <= 0)
+		{
+			audio.PlayOneShot(emptyWeapon);
+		}
+
 	}
 	/*	Do flame state
 	 * This gives the player the ability to slip into the flamethrower weapon and use it.
@@ -332,6 +340,11 @@ public class GunShoot : MonoBehaviour {
 			Flametrigger.SetActive (false);
 			flameFX.SetActive(false);
 			flameAudio.Stop();
+		}
+
+		if(Input.GetMouseButtonDown(0) && flamefuel <= 0)
+		{
+			audio.PlayOneShot(emptyWeapon);
 		}
 	}
 }

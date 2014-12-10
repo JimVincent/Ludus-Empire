@@ -5,6 +5,7 @@ public class S_MachineGun_Ammo : MonoBehaviour {
 
 	public GunShoot gunscript;
 	public int ammoAmount;
+	public AudioClip ammoPickup;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class S_MachineGun_Ammo : MonoBehaviour {
 	{
 		if(col.transform.tag == "Player" && gunscript.machgunbullets < gunscript.maxMachBullets)
 		{
+			AudioSource.PlayClipAtPoint(ammoPickup, transform.position);
 			gunscript.machgunbullets += ammoAmount;
 			if (gunscript.machgunbullets > gunscript.maxMachBullets)
 			{

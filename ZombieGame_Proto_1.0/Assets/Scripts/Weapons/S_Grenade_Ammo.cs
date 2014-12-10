@@ -5,6 +5,7 @@ public class S_Grenade_Ammo : MonoBehaviour {
 
 	public GunShoot gunscript;
 	public int ammoAmount;
+	public AudioClip ammoPickUp;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,7 @@ public class S_Grenade_Ammo : MonoBehaviour {
 	{
 		if(col.transform.tag == "Player" && gunscript.grenadenumber < gunscript.maxGrenadeAmmo)
 		{
+			AudioSource.PlayClipAtPoint(ammoPickUp, transform.position);
 			gunscript.grenadenumber += ammoAmount;
 			S_HUD_Manager.inst.GrenadeCount();
 			if(gunscript.grenadenumber > gunscript.maxGrenadeAmmo)
