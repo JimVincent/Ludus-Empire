@@ -913,6 +913,7 @@ MonoBehaviour:
   grenadeShot: {fileID: 8300000, guid: a8cd9df420723a640b836ff25b900290, type: 3}
   grenadeExplosion: {fileID: 8300000, guid: c49a7ea8ab6a641419ebee509873f1da, type: 3}
   flameAudio: {fileID: 0}
+  emptyWeapon: {fileID: 8300000, guid: 7c5e209c35749f848a80ff437f0f0c97, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

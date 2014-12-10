@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
-  m_LocalPosition: {x: -67.7625046, y: 7.24935389, z: -50.7410736}
+  m_LocalPosition: {x: -63.8687286, y: 8.11622143, z: -30.5896416}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerscript: {fileID: 0}
+  medkitSFX: {fileID: 8300000, guid: b506f6b8444da614a8662e2432047eed, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
